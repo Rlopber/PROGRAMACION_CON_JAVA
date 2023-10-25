@@ -6,11 +6,13 @@
 */
  public class T02Ejercicio06 {
     public static void main(String[] args) {
-        int factura = 5600;
-        double baseImponible = 0.21;
         
-        double totalFactura = factura+(factura*baseImponible);
+        double baseImponible = 1200.50;
 
-        System.out.printf("El total de la factura de %d euros más su base imponible del 21%% es de %.2f euros.\n", factura, totalFactura);
+        System.out.printf("Base imponible %8.2f\n", baseImponible);
+        System.out.println("IVA                 21%");
+        System.out.println("-----------------------");
+        System.out.printf("Total          %8.2f\n", (baseImponible*1.21));
+        
     }
  }

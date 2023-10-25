@@ -7,7 +7,7 @@
     public static void main(String[] args) {
 
         int pesetas = 1000;
-        double euros = pesetas/166.386;
+        float euros = pesetas/166.386f;
         System.out.printf("%d pesetas son %.2f euros.\n", pesetas, euros);
     }
  }
