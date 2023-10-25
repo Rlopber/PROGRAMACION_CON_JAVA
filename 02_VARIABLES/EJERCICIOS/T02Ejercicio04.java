@@ -9,6 +9,6 @@
         double euros = 6;
         int pesetas = (int)(euros * 166.386);
 
-        System.out.println("1 euro son " + pesetas + " pesetas.");
+        System.out.printf("%.2f euros son %d pesetas.\n", euros, pesetas);
     }
  }
