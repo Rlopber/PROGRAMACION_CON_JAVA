@@ -39,7 +39,7 @@ public class Ejemplo01 {
         System.out.println("y vale " + y);
 
         System.out.println("");
-        System.out.println("// // // // // // // //");
+        System.out.println("// // // // // // //");
         char letra1 = 'c'; // las varaibles tipo char almacenan un único carácter entre comillas simples.
         char letra2 = 'a';
         char letra3 = 'a';
