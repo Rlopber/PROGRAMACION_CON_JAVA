@@ -13,7 +13,8 @@ public class T02Ejercicio08 {
     char letra4='r';
     char letra5='o';
 
-    System.out.println(""+ letra1 + letra2 + letra3 + letra4 + letra5);
+    String palabra= ""+ letra1 + letra2 + letra3 + letra4 + letra5;
+    System.out.println(palabra);
 
     // Para que concatene las letras hay que añadir al principio de la frase dobles comillas "".
     // Si no, lo que haría es sumar el codigo ascii de esas letras.
