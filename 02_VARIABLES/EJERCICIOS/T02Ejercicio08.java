@@ -16,6 +16,6 @@ public class T02Ejercicio08 {
     System.out.println(""+ letra1 + letra2 + letra3 + letra4 + letra5);
 
     // Para que concatene las letras hay que añadir al principio de la frase dobles comillas "".
-    // Si no, lo que pasaría es que suma el codigo ascii de esas letras.
+    // Si no, lo que haría es sumar el codigo ascii de esas letras.
     }
 }
