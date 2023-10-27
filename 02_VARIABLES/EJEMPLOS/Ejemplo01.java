@@ -80,11 +80,10 @@ public class Ejemplo01 {
         int num3 = 2;
         int num4 = 9;
 
-        double division;
         System.out.println("El casting de la variable num4: " + (double)num4);
-        System.out.println(division = num4/num3);
-        System.out.println(division = (double)num4 / (double)num3);
-        System.out.println(division = (double) num4/num3);
-        System.out.println(division = num4/(double)num3);
+        System.out.println(num4/num3);
+        System.out.println((double)num4 / (double)num3);
+        System.out.println((double) num4/num3);
+        System.out.println(num4/(double)num3);
     }
 }
