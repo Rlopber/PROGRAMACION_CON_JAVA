@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class T03Ejemplo03 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in, "Windows-1252"); // Creamos un onjeto de la clase Scanner, llamado s.
+        Scanner s = new Scanner(System.in, "Windows-1252"); // Creamos un objeto de la clase Scanner, llamado s.
         
         // Para que funcionen los caracteres especiales en windows, hay que poner system.in, windows-1252 y despues activar abajo
         // chcp 1252
