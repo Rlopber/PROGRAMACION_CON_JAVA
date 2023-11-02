@@ -1,6 +1,6 @@
 /**
 *
-* Descripción del programa
+* Conversor de pesetas a euros.
 *
 * @author: Raquel Lopez
 */
