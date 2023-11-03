@@ -14,7 +14,7 @@ public class T03Ejercicio12 {
         System.out.print("¿Qué nota final quieres obtener en el trimestre?: ");
         float notaf = Float.parseFloat(System.console().readLine());
 
-        float nota2 = (float) (((notaf*100) - (nota1*40))/60);
+        float nota2 = (float) ((notaf - (nota1*0.4))/0.6);
 
         System.out.printf("La nota que debes sacar en el examen es %.2f.\n", (nota2));
 
