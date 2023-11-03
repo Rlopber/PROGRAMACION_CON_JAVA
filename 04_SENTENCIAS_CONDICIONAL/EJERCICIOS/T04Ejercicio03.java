@@ -39,7 +39,7 @@ public class T04Ejercicio03 {
                 System.out.println("El número que has introducido no corresponde a ningún día de la semana.");
                 return;
         }
-        System.out.println("El número " + num + " es " + dia + ".");
+        System.out.println("El número " + num + " corresponde al " + dia + ".");
     }
     
 }
