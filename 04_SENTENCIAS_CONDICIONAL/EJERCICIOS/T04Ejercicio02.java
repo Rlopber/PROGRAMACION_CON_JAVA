@@ -17,7 +17,7 @@ public class T04Ejercicio02 {
             System.out.println("¡Buenos días!");
         } else if (hora >12 && hora <=20) {
             System.out.println("¡Buenas tardes!");
-        } else if (hora >20 && hora <=24 || hora>=1 && hora <=5) {
+        } else if (hora >20 && hora <=24 || hora>=0 && hora <=5) {
             System.out.println("¡Buenas noches!");
         } else {
             System.out.println("El número introducido no es válido.");
