@@ -47,7 +47,7 @@ public class T04Ejercicio09 {
 
         // ax^2 + bx + c = 0  con a, b y c distintos de 0
         } else {
-            if (discriminante<0) {
+            if (discriminante<0) { //El discriminante indica si el número de la raíz es negativo o positivo. Si es negativo, no tiene solución.
                 System.out.println("La ecuación no tiene soluciones reales");
             }  else {
               System.out.printf("El valor 1 es x1 = %.4f\n", x1);
