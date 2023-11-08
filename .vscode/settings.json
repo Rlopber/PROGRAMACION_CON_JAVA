@@ -1,3 +1,6 @@
 {
-    "java.project.sourcePaths": []
+    "java.project.sourcePaths": [
+        "04_SENTENCIAS_CONDICIONAL\\EJEMPLOS",
+        "04_SENTENCIAS_CONDICIONAL\\EJERCICIOS"
+    ]
 }
