@@ -111,6 +111,7 @@ public class T04Ejercicio10 {
                 System.out.println("El mes proporcionado no es válido.");
                 break;
             }
+            s.close();
         }       
     }
 }

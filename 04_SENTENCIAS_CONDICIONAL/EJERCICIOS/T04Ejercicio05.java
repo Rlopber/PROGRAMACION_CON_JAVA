@@ -1,20 +1,9 @@
 /**
-*
-<<<<<<< HEAD
-* Programa que resuelva una ecuación de primer grado (ax+b=0).
+* Realiza un programa que resuelva una ecuación de primer grado (del tipo ax+b=0).
 *
 * @author Raquel Lopez
 */
 
-public class T04Ejercicio05 {
-    public static void main(String[] args) {
-        System.out.println("Este programa resuelve ecuaciones de primer grado del tipo ax+b = 0");
-        System.out.println();
-=======
-* Realiza un programa que resuelva una ecuación de primer grado (del tipo ax+b=0).
-*
-* @author: Raquel Lopez
-*/
 import java.util.Scanner;
 public class T04Ejercicio05 {
     public static void main(String[] args) {
@@ -37,6 +26,6 @@ public class T04Ejercicio05 {
             }
 
         s.close();
->>>>>>> 973c760551266b0fb9e2bc6604ba700d539e8c97
+
     }
 }
