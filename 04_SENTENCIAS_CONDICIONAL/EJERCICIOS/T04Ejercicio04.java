@@ -14,7 +14,7 @@ public class T04Ejercicio04 {
 
         if (horas>=1 && horas<=40) {
             System.out.printf("Esta semana su salario es de %.2f euros.\n", (horas*12));
-        } else if (horas>41) {
+        } else if (horas>=41) {
             int horaOrd = 480;
             float horaExt = ((horas-40)*16);
             System.out.println("Por tus primeras 40 horas vas a ganar " + horaOrd + " euros.");
