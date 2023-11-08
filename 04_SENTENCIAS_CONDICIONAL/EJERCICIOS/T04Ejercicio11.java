@@ -21,7 +21,7 @@ public class T04Ejercicio11 {
             System.out.println("Alguno de los los valores introducidos no es válido.");
         } else {
             int segundosMedianoche = (23 - hora) * 3600 + (59 - minuto) * 60;
-            System.out.printf("Desde las %02d:%02d hasta la medianoche faltan %d segundos .\n", hora, minuto, segundosMedianoche);
+            System.out.printf("Desde las %02d:%02d hasta la medianoche faltan %d segundos.\n", hora, minuto, segundosMedianoche);
         }
 
         s.close();
