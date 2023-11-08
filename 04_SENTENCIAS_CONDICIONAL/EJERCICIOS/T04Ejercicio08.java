@@ -27,17 +27,17 @@ public class T04Ejercicio08 {
             double media = (nota1+nota2+nota3)/3;
             System.out.printf("La media de las notas añadidas es de %.2f.\n", media);
             
-        if (media<5){
-            System.out.println("Tu nota final es: insuficiente.");
-        } else if (media<6) {
-            System.out.println("Tu nota final es: suficiente.");
-        } else if (media<7) {
-            System.out.println("Tu nota final es: bien.");
-        } else if (media<9) {
-            System.out.println("Tu nota final: notable.");
-        } else {
-            System.out.println("Tu nota final: sobresaliente.");
-        }
+            if (media<5){
+                System.out.println("Tu nota final es: insuficiente.");
+            } else if (media<6) {
+                System.out.println("Tu nota final es: suficiente.");
+            } else if (media<7) {
+                System.out.println("Tu nota final es: bien.");
+            } else if (media<9) {
+                System.out.println("Tu nota final: notable.");
+            } else {
+                System.out.println("Tu nota final: sobresaliente.");
+            }
         }
         s.close();
     }
