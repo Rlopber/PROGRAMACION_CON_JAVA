@@ -16,10 +16,12 @@ public class T04Ejercicio06 {
         System.out.print("Por favor, introduzca la altura (en metros) desde la que cae el objeto: ");
         double h = s.nextDouble();
 
+        final double G = 9.81; //Como g es un valor constante (gravedad), final lo declara como constante.
+
         if (h<=0) {
             System.out.println("No hay tiempo de caída si la altura es 0 o negativa.");
         } else {
-            double solucion = (double) Math.sqrt(2*h/9.81);
+            double solucion = (double) Math.sqrt(2*h/G);
              if (h == (int) h) {
             System.out.printf("El tiempo que tarda el objeto en caer desde %.0f metros es de %.4f segundos.\n", h, solucion);
             } else {
