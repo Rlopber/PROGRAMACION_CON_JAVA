@@ -23,7 +23,7 @@ public class T04Ejercicio06 {
         } else {
             double solucion = (double) Math.sqrt(2*h/G);
              if (h == (int) h) {
-            System.out.printf("El tiempo que tarda el objeto en caer desde %.0f metros es de %.4f segundos.\n", h, solucion);
+            System.out.printf("El tiempo que tarda el objeto en caer desde %.0f metros es de %.4f segundos.\n", h, solucion); //Si queremos que salgan los segundos como comillas, hay que poner %.af\"
             } else {
             System.out.printf("El tiempo que tarda el objeto en caer desde %.2f metros es de %.4f segundos.\n", h, solucion);
             }
