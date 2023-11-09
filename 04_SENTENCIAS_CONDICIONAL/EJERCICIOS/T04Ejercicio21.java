@@ -17,21 +17,16 @@ public class T04Ejercicio21 {
     double nota2 = s.nextDouble();
 
     double media = (nota1+nota2)/2;
-    double notaf = 0;
 
     if (media <5) {
       System.out.print("¿Cuál ha sido el resultado de la recuperación? (apto/no apto): ");
       String recu = s.next().toLowerCase();
         if (recu.equals("apto")) {
-          notaf = 5;
-        } else {
-          notaf = media;
-        }
-      } else {
-      notaf = media;
+          media = 5;
+        } 
     }
-
-    System.out.println("Tu nota de programación es " + notaf);
+    
+    System.out.println("Tu nota de programación es " + media);
     s.close();
   }  
 }
