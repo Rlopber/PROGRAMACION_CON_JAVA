@@ -18,15 +18,15 @@ public class T04Ejercicio18 {
         s.close();
         
         // Comprobación del número de cifras y de la primera cifra.
-        if (primeraCifra < 10) {
+        if (numeroAbs < 10) {
             primeraCifra = numeroAbs;
-        } else if (primeraCifra>=10 && primeraCifra<100) {
+        } else if (numeroAbs>=10 && numeroAbs<100) {
             primeraCifra = numeroAbs/10; 
-        } else if (primeraCifra>=100 && primeraCifra<1000) {
+        } else if (numeroAbs>=100 && numeroAbs<1000) {
             primeraCifra = numeroAbs/100; 
-        } else if (primeraCifra>=1000 && primeraCifra<10000) {
+        } else if (numeroAbs>=1000 && numeroAbs<10000) {
             primeraCifra = numeroAbs/1000;
-        } else if (primeraCifra>=10000 && primeraCifra<100000) {
+        } else if (numeroAbs>=10000 && numeroAbs<100000) {
             primeraCifra = numeroAbs/10000;
         } else {
             System.out.println("El número introducido tiene más de 5 cifras.");
