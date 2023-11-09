@@ -19,13 +19,13 @@ public class T04Ejercicio19 {
         // Comprobación del número de cifras.
         if (numeroAbs < 10) {
             digitos = 1;
-        } else if (numeroAbs>=10 && numeroAbs<100) {
+        } else if (numeroAbs<100) {
             digitos = 2; 
-        } else if (numeroAbs>=100 && numeroAbs<1000) {
+        } else if (numeroAbs<1000) {
             digitos = 3;
-        } else if (numeroAbs>=1000 && numeroAbs<10000) {
+        } else if (numeroAbs<10000) {
             digitos = 4;
-        } else if (numeroAbs>=10000 && numeroAbs<100000) {
+        } else if (numeroAbs<100000) {
             digitos = 5;
         } else {
             System.out.println("El número introducido tiene más de 5 cifras.");
@@ -36,7 +36,7 @@ public class T04Ejercicio19 {
             System.out.printf("El número \033[1;30m%d\033[0m tiene \033[1;35m1\033[0m dígito.", numero);
         } else {
             System.out.printf("El número \033[1;30m%d\033[0m tiene \033[1;35m%d\033[0m dígitos.", numero, digitos);
-            }
+        }
         
     }
 }
