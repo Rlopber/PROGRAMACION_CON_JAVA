@@ -13,12 +13,12 @@ public class T04Ejercicio18 {
 
         System.out.print("Por favor, introduzca un número entero (5 cifras como máximo): ");
         int numero = s.nextInt();
-        int primeraCifra = Math.abs(numero);
+        int primeraCifra = Math.abs(numero); //Almacena la primera cifra del numero.
         s.close();
         
         // Comprobación del número de cifras y de la primera cifra.
         if (primeraCifra < 10) {
-            primeraCifra = numero;
+            System.out.println(""); // La primera cifra es ya es el número.
         } else if (primeraCifra>=10 && primeraCifra<100) {
             primeraCifra /= 10; // (primeraCifra /= 100) es lo mismo que (primeraCifra = primeraCifra/100)
         } else if (primeraCifra>=100 && primeraCifra<1000) {
