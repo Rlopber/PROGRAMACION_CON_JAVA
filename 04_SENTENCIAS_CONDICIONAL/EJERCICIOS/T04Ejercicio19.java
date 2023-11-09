@@ -32,8 +32,11 @@ public class T04Ejercicio19 {
             return; //Sale del programa si tiene más de 5 cifras.
         }
 
-        System.out.printf("El número \033[1;30m%d\033[0m tiene \033[1;35m%d\033[0m dígitos.", numero, digitos);
-    
+        if (digitos == 1) {
+            System.out.printf("El número \033[1;30m%d\033[0m tiene \033[1;35m1\033[0m dígito.", numero);
+        } else {
+            System.out.printf("El número \033[1;30m%d\033[0m tiene \033[1;35m%d\033[0m dígitos.", numero, digitos);
+            }
         
     }
 }
