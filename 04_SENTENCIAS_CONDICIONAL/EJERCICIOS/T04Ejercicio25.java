@@ -55,27 +55,3 @@ public class T04Ejercicio25 {
         System.out.printf("Total: %18.2f \u20AC\n", precioTotal);
     }
 }
-/* : 20
-Ahora introduzca la anchura: 35
-¿Quiere escudo bordado? (s/n): n
-Gracias. Aquí tiene el desglose de su compra.
-Bandera de 700 cm2: 7,00 €
-Sin escudo:
-0,00 €
-Gastos de envío:
-Total:
-Ejemplo 2:
-Introduzca la altura de la bandera en cm: 10
-Ahora introduzca la anchura: 15
-¿Quiere escudo bordado? (s/n): s
-Gracias. Aquí tiene el desglose de su compra.
-Bandera de 150 cm2: 1,50 €
-Con escudo:
-2,50 €
-Gastos de envío:
-Total:
-3,25 €
-7,25 €
-3,25 €
-10,25 €
-*/
