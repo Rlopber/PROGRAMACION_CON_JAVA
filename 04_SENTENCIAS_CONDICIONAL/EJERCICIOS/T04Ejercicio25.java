@@ -48,6 +48,7 @@ public class T04Ejercicio25 {
         double precioTotal = precio+precioEscudo+gastosEnvio;
         
         System.out.println("");
+        System.out.println("Gracias. Aquí tiene el desglose de su compra.");
         System.out.printf("Bandera de %d cm\u00B2: %5.2f \u20AC\n", anchura, precio);
         System.out.printf("%s escudo: %13.2f \u20AC\n", Escudo, precioEscudo);
         System.out.printf("Gastos de envío: %8.2f \u20AC\n", gastosEnvio);
