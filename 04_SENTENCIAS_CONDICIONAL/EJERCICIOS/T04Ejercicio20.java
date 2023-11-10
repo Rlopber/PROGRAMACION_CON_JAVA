@@ -25,12 +25,13 @@ public class T04Ejercicio20 {
              if ((numeroAbs/10) == (numeroAbs%10)) {
                 capicua = true;
              }
-        } else if (numeroAbs>=100 && numeroAbs<1000) {
+        } else if (numeroAbs>=100 && numeroAbs<1000) { 
             if ((numeroAbs/100) == (numeroAbs%10)) {
                 capicua = true;
              }
-        } else if (numeroAbs>=1000 && numeroAbs<10000) {
-            if (((numeroAbs/1000) == (numeroAbs%10)) && (((numeroAbs/100)%10) == ((numeroAbs/10)%10))) {
+             //Formula para cualquier numero: (numero/10^nºcifras-1) == (numero%10) && ((numero/10^nºcifras-1)/%10) == ((numero/10)%10)
+        } else if (numeroAbs>=1000 && numeroAbs<10000) { 
+            if (((numeroAbs/1000) == (numeroAbs%10)) && (((numeroAbs/100)%10) == ((numeroAbs/10)%10))) { 
                 capicua = true;
              }
         } else if (numeroAbs>=10000 && numeroAbs<100000) {

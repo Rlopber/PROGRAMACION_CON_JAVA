@@ -29,17 +29,11 @@ public class T04Ejercicio26 {
     // Precio de la entrada normal
     int precioBase = 8;
 
-    //Determinar descuento
-    double descuento = 0;
-
-    if (tarjeta.equals("s")) {
-        descuento = 0.1;
-    }
-
     // Determinar precio final según el día de la semana.
 
     double precioFinal = 0;
     double precioParejas = 5.5;
+    String especial = "individual";
 
     switch (dia) {
         case "lunes", "martes", "viernes", "sabado", "sábado", "domingo":
@@ -55,36 +49,47 @@ public class T04Ejercicio26 {
             if (numEntrada%2==0) {
                 precioFinal = precioParejas*numEntrada;
             } else {
+                especial = "mezcla";
                 precioParejas = 5.5;
                 precioFinal = (precioParejas*(numEntrada-1))+precioBase;
             }
             break;
     
         default:
-            System.out.println("EL día de la semana que ha intrducido no es válido.");
+            System.out.println("El día de la semana que ha introducido no es válido.");
             break;
     }
 
-    System.out.println("");
-    System.out.println("Aquí tiene sus entradas. Gracias por su compra.");
-    
-    System.out.printf("Entradas individuales: %5d\n", numEntrada);
-    System.out.printf("%s escudo: %13.2f \u20AC\n", Escudo, precioEscudo);
-    System.out.printf("Gastos de envío: %8.2f \u20AC\n", gastosEnvio);
-    System.out.printf("Total: %18.2f \u20AC\n", precioTotal);
+    //Determinar descuento
+    double descuento = 0;
 
-    
+    if (tarjeta.equals("s")) {
+        descuento = precioFinal*0.1;
+    }
+
+
+    System.out.println("");
+    System.out.println("Aquí tiene sus entradas. ¡Gracias por su compra!");
+    System.out.println("");
+
+    if (especial.equals("individual")) {
+        System.out.printf("Entradas individuales: %15d\n", numEntrada);
+        System.out.printf("Precio por entrada individual: %5d \u20AC\n", precioBase);
+
+    } else if (especial.equals("pareja")) {
+        System.out.printf("Entradas de pareja: %18d\n", (numEntrada/2));
+        System.out.printf("Precio por entradas de pareja: %5.0f \u20AC\n", precioParejas*2);
+
+    } else if (especial.equals("mezcla")) {
+        System.out.printf("Entradas individuales: %15d\n", 1);
+        System.out.printf("Entradas de pareja: %18d\n", ((numEntrada-1)/2));
+        System.out.printf("Precio por entrada individual: %5d \u20AC\n", precioBase);
+        System.out.printf("Precio por entradas de pareja: %5.0f \u20AC\n", precioParejas*2);
+    }
+
+    System.out.printf("Total: %29.2f \u20AC\n", precioFinal);
+    System.out.printf("Descuento: %25.2f \u20AC\n", descuento);
+    System.out.printf("A pagar: %27.2f \u20AC\n", (precioFinal-descuento));
    
   }  
 }
-/*
-Aquí tiene sus entradas. Gracias por su compra.
-Entradas individuales
-4
-Precio por entrada individual 8.00 €
-Total
-32.00 €
-Descuento
-A pagar
-3.20 €
-28.80 € */

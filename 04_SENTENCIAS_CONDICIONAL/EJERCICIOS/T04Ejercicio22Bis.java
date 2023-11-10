@@ -11,14 +11,14 @@
 import java.util.Scanner;
 import static colors.ConsoleColors.*;
 
-public class T04Ejercicio22 {
+public class T04Ejercicio22Bis {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
         System.out.println(BLACK_BOLD + "=============================" + RESET);
         System.out.println("||" + PURPLE_BACKGROUND +  "CONTADOR DE FIN DE SEMANA" + RESET + "||");
         System.out.println(BLACK_BOLD + "=============================" + RESET);
-        System.out.print("Día de la semana (de lunes a viernes): ");
+        System.out.print("Día de la semana (de lunes a domingo): ");
         String dia = s.nextLine().toLowerCase();
         System.out.print("Hora (horas y minutos separados por un \":\"): ");
         String entradaHora = s.nextLine();
@@ -46,7 +46,7 @@ public class T04Ejercicio22 {
                 horaFinal = (24-horas) + (24*2) + 15;
                 break;
 
-            case "miércoles":
+            case "miércoles": 
             case "miercoles":
                 horaFinal = (24-horas) + 24 + 15;
                 break;
@@ -57,6 +57,15 @@ public class T04Ejercicio22 {
 
             case "viernes":
                 horaFinal = (24-horas);
+                break;
+
+            case "sabado":
+            case "sábado":
+                horaFinal = (24-horas) + (24*5) + 15;
+                break;
+
+            case "domingo":
+                horaFinal = (24-horas) + (24*4) + 15;
                 break;
 
             default:

@@ -39,38 +39,38 @@ public class T04Ejercicio23 {
         porcentajeIva =4;
     }
 
-    double ivaf = baseImponible * (porcentajeIva/100.0);
-    double precio = baseImponible + ivaf;
+    double iva = baseImponible * (porcentajeIva/100.0);
+    double precioConIva = baseImponible + iva;
 
     // Aplicar la promoción
     switch (promocion) {
         case "nopro": //No tiene descuento
-            
             break;
         
         case "mitad": //Precio a la mitad
-            descuento = (precio/2);
+            descuento = (precioConIva/2);
             break;
         
         case "meno5": //5 euros de descuento
             descuento = 5;
             break;
+
         case "5porc": //5% de descuento
-            descuento = precio*0.05;
+            descuento = precioConIva*0.05;
             break;
+            
         default:
         System.out.println("El descuento introducido no es correcto.");
             break;
     }
 
-    double total = precio - descuento;
+    double total = precioConIva - descuento;
 
     System.out.println("========================");
-    System.out.printf("Base imponible       %6.2f\n", baseImponible);
-    System.out.printf("IVA (%2d%%)            %6.2f\n", porcentajeIva, ivaf);
-    System.out.printf("Precio con IVA       %6.2f\n", precio);
-    System.out.printf("Cód. promo. (%5s) -%6.2f\n", promocion, descuento);
-    System.out.printf("TOTAL                %6.2f", total);
-
+    System.out.printf("Base imponible       %6.2f \u20AC\n", baseImponible);
+    System.out.printf("IVA (%2d%%)            %6.2f \u20AC\n", porcentajeIva, iva);
+    System.out.printf("Precio con IVA       %6.2f \u20AC\n", precioConIva);
+    System.out.printf("Cód. promo. (%5s)  %6.2f \u20AC\n", promocion, descuento);
+    System.out.printf("TOTAL                %6.2f \u20AC\n", total);
   } 
 }
