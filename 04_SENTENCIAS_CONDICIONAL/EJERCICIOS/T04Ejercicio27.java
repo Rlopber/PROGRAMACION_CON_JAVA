@@ -27,20 +27,24 @@ public class T04Ejercicio27 {
     System.out.print("Elija uno de nuestros sabores (manzana, fresa o chocolate): ");
     String sabor = s.nextLine().toLowerCase();
         if (sabor.equals("chocolate")) {
-            System.out.println("¿De qué tipo de chocolate (blanco o negro)?: ");
+            System.out.print("¿De qué tipo de chocolate (blanco o negro)?: ");
             tipoChoco = s.nextLine().toLowerCase();
         }
-    System.out.println("¿Quiere nata? (s/n)");
+    System.out.print("¿Quiere nata?: (s/n) ");
     String nata = s.nextLine().toLowerCase();
-    System.out.println("¿Quiere ponerle un nombre? (s/n)");
+    System.out.print("¿Quiere ponerle un nombre?: (s/n) ");
     String nombre = s.nextLine().toLowerCase();
 
     s.close();
 
+    // Declaración de varibles
+
+    double precioTarta = 0;
+    double precioNata = 0;
+    double precioNombre = 0;
+    
+
     // Precios según el sabor
-
-    int precioTarta = 0;
-
     switch (sabor) {
         case "manzana":
             precioTarta = 18;
@@ -51,23 +55,35 @@ public class T04Ejercicio27 {
             break;
 
         case "chocolate":
-            switch (tipoChoco) {
-                case "blanco":
-                    precioTarta = 15;
+            if (tipoChoco.equals("blanco")) {
+                sabor = "chocolate blanco";
+                precioTarta = 15;
+            } else if (tipoChoco.equals("negro")) {
+                sabor = "chocolate negro";
+                precioTarta = 14;
             }
-            
-            precioTarta = 18;
             break;
+
         default:
-            break;
+            System.out.println("¡No has elegido nuestros sabores de tartas!");
+            return;
     }
+
+    System.out.println("");
+    System.out.println("\033[1;30mTu ticket:\033[0m");
+    System.out.printf("Tarta de %s: %.2f \u20AC\n", sabor, precioTarta);
+    if (nata.equals("s")) {
+        precioNata = 2.5;
+        System.out.printf("Con nata: %.2f \u20AC\n", precioNata);
+    }
+    if (nombre.equals("s")) {
+        precioNombre = 2.75;
+        System.out.printf("Con nombre: %.2f \u20AC\n", precioNombre);
+    }
+
+    double precioTotal = precioTarta + precioNata + precioNombre;
+
+    System.out.printf("Total: %.2f \u20AC\n", precioTotal);
+
   }  
 }
-
-/*Elija un sabor (manzana, fresa o chocolate): chocolate
-¿Qué tipo de chocolate quiere? (negro o blanco): negro
-¿Quiere nata? (si o no): si
-¿Quiere ponerle un nombre? (si o no): no
-Tarta de chocolate negro: 14,00 €
-Con nata: 2,50 €
-Total: 16,50 € */
