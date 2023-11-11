@@ -42,6 +42,10 @@ public class T04Ejercicio28 {
                         ganador = 2;
                     }
                     break;
+
+                default:
+                    System.out.println("Alguna de las opciones no es válida, ¡inténtalo de nuevo!");
+                    return;
             }
 
             if (ganador == 1) { 
