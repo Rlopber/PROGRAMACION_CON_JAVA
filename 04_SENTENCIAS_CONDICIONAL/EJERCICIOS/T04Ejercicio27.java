@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
 *
 * Una pastelería nos ha pedido realizar un programa que haga presupuestos de tartas. 
