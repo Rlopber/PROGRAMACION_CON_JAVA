@@ -26,8 +26,7 @@ public class T05EJ04 {
             }
         }
 
-        System.out.println("Has introducido " + numPositivos + " números positivos.");
-
         s.close();
+        System.out.println("Has introducido " + numPositivos + " números positivos.");
     }
 }
