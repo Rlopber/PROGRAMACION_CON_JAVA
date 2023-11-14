@@ -12,6 +12,5 @@ public class T05EJ01 {
             System.out.print(i + " ");
         }
     }
-
 }
 
