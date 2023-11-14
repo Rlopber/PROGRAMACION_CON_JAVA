@@ -21,7 +21,7 @@ public class T05EJ04 {
         while (numIntroducido >= 0) {
             System.out.print("Número: ");
             numIntroducido = s.nextInt();
-            if (numIntroducido >= 0){
+            if (numIntroducido >= 0) {
                 numPositivos++;
             }
         }
