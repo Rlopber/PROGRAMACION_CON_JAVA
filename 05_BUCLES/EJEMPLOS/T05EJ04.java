@@ -15,18 +15,18 @@ public class T05EJ04 {
         System.out.println("Contador de números positivos.");
 
         int numIntroducido = 0; // Variable contador para la salida del bucle
-        int numPositivos = 0; // Variable acumuladora de números enteros positivos.
+        int contador = 0; // Variable acumuladora de números enteros positivos.
 
         System.out.println("Escribe números enteros positivos. El contador parará cuando introduzcas un número negativo.");
         while (numIntroducido >= 0) {
             System.out.print("Número: ");
             numIntroducido = s.nextInt();
-            if (numIntroducido >= 0) {
-                numPositivos++;
+            if (numIntroducido > 0) { // Si el número es mayor a 0 suma 1 al contador numPositivos.
+                contador++;
             }
         }
 
         s.close();
-        System.out.println("Has introducido " + numPositivos + " números positivos.");
+        System.out.println("Has introducido " + contador + " números positivos.");
     }
 }
