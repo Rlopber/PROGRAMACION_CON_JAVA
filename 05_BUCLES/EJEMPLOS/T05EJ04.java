@@ -14,9 +14,9 @@ public class T05EJ04 {
         
         System.out.println("Contador de números positivos.");
 
-        int numIntroducido = 0; // Variable contador para la salida del bucle
+        int numIntroducido = 0; // Variable controladora de la salida del bucle.
         int contador = 0;       // Variable contadora de números enteros positivos.
-        int suma = 0;            // Variable acumuladora de números positivos.
+        int suma = 0;           // Variable acumuladora de números positivos.
 
         System.out.println("Escribe números enteros positivos. El contador parará cuando introduzcas un número negativo.");
         while (numIntroducido >= 0) {
