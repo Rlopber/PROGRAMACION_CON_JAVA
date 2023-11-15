@@ -13,7 +13,7 @@ public class T05Ejercicio02 {
 
         while (i < 101) {
         System.out.print(i + " ");
-        i +=5 ;
+        i +=5;
         }
     }
 }

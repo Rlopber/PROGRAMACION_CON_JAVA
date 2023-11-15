@@ -25,15 +25,16 @@ public class T05Ejercicio07 {
 
         do { 
         System.out.print("Introduzca la combinación de 4 cifras: ");
-        int intento = s.nextInt();
+        int numIntroducido = s.nextInt();
+        intentos--;
 
-            if (intento == combCorrecta) {
+            if (numIntroducido == combCorrecta) {
                 System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
                 break;
                 
             } else {
                 System.out.println("Lo siento, esa no es la combinación.");
-                intentos--;
+                
                 if (intentos > 0) {
                     System.out.println("Te quedan " + intentos + " intentos.");
                 } else {
