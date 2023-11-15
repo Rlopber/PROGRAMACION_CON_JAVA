@@ -22,7 +22,7 @@ public class T05Ejercicio08 {
     
 
     for (int i = 0; i < 11; i++) {
-        System.out.println(numero + " * " + i + " = " + (numero*i));
+        System.out.printf("%2d x %2d = %3d\n", numero, i, numero*i);
     }
 
     s.close();
