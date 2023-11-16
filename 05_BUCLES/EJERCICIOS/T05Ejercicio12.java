@@ -24,7 +24,7 @@ public class T05Ejercicio12 {
         System.out.println("   \033[1;92mSERIE DE FIBONACCI\033[0m");
         System.out.println("\033[0;32m~~~~~~~~~~~~~~~~~~~~~~~~\033[0m");
 
-        // Pedir datos
+        // Explicación del problema y pedir datos
         System.out.println("Este programa calcula la serie de Fibonacci para un número dado, 'n'.");
         System.out.print("Por favor, introduzca el valor de n: ");
         n = s.nextInt();
