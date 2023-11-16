@@ -30,14 +30,22 @@ public class T05Ejercicio12 {
         n = s.nextInt();
         s.close();
 
-        //Calcular Fibonacci y presentar por pantalla
-        System.out.print(primerTermino + " ");
-        for (int i = 1; i < n; i++) { // El contador empieza en 1 porque el primer número se escribe fuera del contador.
-            System.out.print(segundoTermino + " ");
-            
-            resultado = primerTermino + segundoTermino;
-            primerTermino = segundoTermino;
-            segundoTermino = resultado;
-        } 
+        // Caso especial para n = 0
+        if (n == 0) {
+            System.out.println("La serie de Fibonacci para n = 0 es: " + primerTermino);
+        } else { // Imprimir los primeros n términos de la serie de Fibonacci
+            System.out.print(primerTermino + " ");
+            if (n > 1) {
+                System.out.print(segundoTermino + " ");
+            }
+
+            for (int i = 2; i < n; i++) { // Empieza en 2 porque los dos primeros números se escriben fuera del bucle.
+                resultado = primerTermino + segundoTermino;
+                System.out.print(resultado + " ");
+
+                primerTermino = segundoTermino;
+                segundoTermino = resultado;
+            }
+        }
     }
 }
