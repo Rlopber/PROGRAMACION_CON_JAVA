@@ -38,6 +38,6 @@ public class T05Ejercicio14 {
             resultado *= base;
         }
 
-        System.out.println(base + " ^ " + exponente + " = " + resultado);
+        System.out.printf("%f ^ %d = %f\n", base, exponente, resultado);
     }
 }
