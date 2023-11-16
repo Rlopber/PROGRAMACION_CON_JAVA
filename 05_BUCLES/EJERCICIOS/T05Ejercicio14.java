@@ -31,12 +31,12 @@ public class T05Ejercicio14 {
                 System.out.println("El exponente tiene que ser un número entero y positivo.");
             } else if (exponente == 0) {
                 System.out.println("Cualquier número elevado a 0 es \033[1;30m1\033[0m.");
+            } else {
+                // Calcular la potencia
+                for (int i = 0; i < exponente; i++) {
+                    resultado *= base;
+                }
             }
-        
-        // Calcular la potencia
-        for (int i = 0; i < exponente; i++) {
-            resultado *= base;
-        }
 
         System.out.printf("%f ^ %d = %f\n", base, exponente, resultado);
     }
