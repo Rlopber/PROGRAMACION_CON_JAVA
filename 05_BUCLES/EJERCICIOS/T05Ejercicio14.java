@@ -41,3 +41,13 @@ public class T05Ejercicio14 {
         System.out.printf("%f ^ %d = %f\n", base, exponente, resultado);
     }
 }
+/*
+ * Si hay que hacerlo para negativos:
+ * for (int i = 1; i <= -exponente; i++) {
+ * potencia *= base;
+ * }
+ * potencia = 1/potencia;
+ * 
+ * o se puede hacer con absolutos y despues terminar con la división en caso de que sea un número negativo.
+ * 
+ */
