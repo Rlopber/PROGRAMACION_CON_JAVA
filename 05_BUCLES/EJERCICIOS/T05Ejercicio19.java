@@ -16,6 +16,7 @@ public class T05Ejercicio19 {
         //Desclarar variables iniciales
         int altura = 0;
         char caracter;
+        int i = 0;
 
         //Descripción del programa y entrada de datos
         System.out.println("  \033[1;36mPINTANDO PIRÁMIDES\033[0m");
@@ -33,14 +34,14 @@ public class T05Ejercicio19 {
 
         // Creación de la pirámide
         for (int pisoPiramide = 1; pisoPiramide <= altura; pisoPiramide++) {
-            
+
             // Imprimir espacios en blanco antes de los caracteres
-            for (int i = 1; i <= numeroEspacios; i++) {
+            for (i = 1; i <= numeroEspacios; i++) {
                 System.out.print(" ");
             }
 
             // Imprimir el carácter
-            for (int i = 1; i <= numeroCaracter; i++) {
+            for (i = 1; i <= numeroCaracter; i++) {
                 System.out.print(caracter);
             }
 
