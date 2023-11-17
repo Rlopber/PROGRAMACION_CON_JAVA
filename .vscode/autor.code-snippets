@@ -36,4 +36,15 @@
 			"Scanner s = new Scanner(System.in);",
 			"s.close();",]
 		}
+
+		"Descripciones": {
+			"scope": "java",
+			"prefix": "Desc-",
+			"body": [
+				"//Desclarar variables",
+				"//Descripción del programa",
+				"//Entrada de datos"
+				"//Comprobación de datos",
+				"//Resolución del problema",]
+			}
 }
