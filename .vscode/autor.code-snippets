@@ -42,8 +42,7 @@
 			"prefix": "Desc-",
 			"body": [
 				"//Desclarar variables",
-				"//Descripción del programa",
-				"//Entrada de datos"
+				"//Descripción del programa y entrada de datos",
 				"//Comprobación de datos",
 				"//Resolución del problema",]
 			}
