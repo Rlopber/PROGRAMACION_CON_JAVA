@@ -23,7 +23,7 @@ public class T05Ejercicio25 {
         s.close();
         
         //Dar la vuelta a los números.
-        int numero = numeroIntroducido; // Variable auxiliar para mantener no cambiar los datos de numeroIntroducido.
+        int numero = numeroIntroducido; // Variable auxiliar no cambiar los datos de numeroIntroducido.
         
         while (numero > 0) {
         numeroAlReves = (numeroAlReves*10) + (numero%10);
