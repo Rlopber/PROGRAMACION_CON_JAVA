@@ -39,13 +39,23 @@ public class T05Ejercicio26 {
                 posicion++;
                 }          
             }
-        } 
+        }
+        
+        // Contador de dígitos del número
+        int contador = 0;
+
+        while (numeroIntroducido > 0) {
+            numeroIntroducido = numeroIntroducido / 10;
+            contador++;
+        }
 
         //Resolución del problema 
+        int posicionDesdeIzquierda = contador - (posicion-1);
+
         System.out.println();
         if (encontrado) { 
             System.out.println("El número elegido es " + numeroIntroducido + " y el dígito elegido es el " + digito + ".");
-            System.out.println("La posición del dígito es la " + posicion + "ª.");
+            System.out.println("La posición del dígito es la " + posicionDesdeIzquierda + "ª.");
            
         } else {
             System.out.println("El dígito " + digito + " no se encuentra en el número " + numeroIntroducido + ".");
