@@ -21,17 +21,24 @@ public class T05Ejercicio28 {
         System.out.println("\033[1;30m--  --  --  --  --  --  --  --\033[0m");
         System.out.println();
         System.out.println("Este programa es una calculadora de factoriales.");
-        System.out.print("Introduce un número entero: ");
+        System.out.print("Introduce un número entero positivo: ");
         numero = s.nextInt();
+        while (numero < 0) {
+            System.out.println("El número no es válido. Por favor, introduzca un número mayor o igual a 0.");
+            numero = s.nextInt();
+        }
         s.close();
 
         //Factorial de un número
-        for (int i = 1; i <= numero; i++) {
+        if (numero == 0)  {
+            factorial = 1;
+        } else {
+            for (int i = 1; i <= numero; i++) {
             factorial *= i;
+            }
         }
-
-        //Resolución del problema
-        System.out.printf("\033[1;37m%d!\033[0m = \033[1;31m%d\033[0m", numero, factorial);
         
+        //Resolución del problema
+        System.out.printf("\033[1;37m%d!\033[0m = \033[1;31m%d\033[0m\n", numero, factorial);    
     }    
 }
