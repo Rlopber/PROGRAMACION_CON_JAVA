@@ -22,17 +22,21 @@ public class T05Ejercicio39 {
         System.out.print("Introduce un número entero positivo: ");
         int numeroFinal = s.nextInt();
         while (numeroFinal < 0) {
-            System.out.println("EL númerpo introducido no es válido. Pruebe de nuevo.");
+            System.out.println("El número introducido no es válido. Pruebe de nuevo.");
             System.out.print("Número: ");
             numeroFinal = s.nextInt();
         }
         s.close();
 
-        //Factorial de un número
+        //Factorial de un número 
         do {
+            if (numeroInicial == 0) {
+                System.out.println("!0 = 1"); // Caso especial para 0
+            } else {
             numeroInicial++;
             factorial *= numeroInicial;
             System.out.println("!" + numeroInicial + " = " + factorial);
+            }  
         } while (numeroInicial < numeroFinal);
     }    
 }
