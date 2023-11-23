@@ -14,7 +14,7 @@ public class T05Ejercicio35 {
         
         Scanner s = new Scanner(System.in);
         //Descripción del programa y entrada de datos
-        System.out.println("Este programa dibuja la letra U con asteriscos con una altura superior a 3 y que sea impar.");
+        System.out.println("Este programa dibuja la letra X con asteriscos con una altura superior a 3 y que sea impar.");
         System.out.print("Introduce la altura: ");
         int altura = s.nextInt();
         while (altura%2==0 || altura <=3) {
