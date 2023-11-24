@@ -22,12 +22,17 @@ public class T14Ejemplo02 {
             asteriscos = Integer.parseInt(s.nextLine());
             System.out.print("Introduce el número de líneas: ");
             lineas = Integer.parseInt(s.nextLine());
-
-            if ((asteriscos%lineas) == 0) {
-            }
-        } finally {
+            s.close();
             
+            if ((asteriscos%lineas) == 0) {
+                longitud = asteriscos/lineas;
+            } else {
+                longitud = (int) Math.ceil((double) asteriscos / (double) lineas); //Math.ceil redondea al siguiente número más próximo. Floor redondea hacia atrás.
+            }
+        } catch (NumberFormatException nfe) {
+            System.out.println("Se deben introducir valores de tipo entero.");
+        } catch (ArithmeticException ae) {
+            System.out.println("El número de líneas no puede ser cero");
         }
-        s.close();
     }
 }
