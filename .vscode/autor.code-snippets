@@ -37,7 +37,7 @@
 			"s.close();",]
 		}
 
-		"Descripciones": {
+	"Descripciones": {
 			"scope": "java",
 			"prefix": "Desc-",
 			"body": [
@@ -45,5 +45,14 @@
 				"//Descripción del programa y entrada de datos",
 				"//Comprobación de datos",
 				"//Resolución del problema",]
-			}
+		}
+
+	"Dar la vuelta a un número": {
+			"scope": "java",
+			"prefix": "Invertir-",
+			"body": [
+				"//while (numero > 0) {",
+				"//numeroAlReves = (numeroAlReves*10) + (numero%10);",
+				"//numero /= 10;",]
+		}
 }
