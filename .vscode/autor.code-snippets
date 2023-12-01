@@ -41,7 +41,7 @@
 			"scope": "java",
 			"prefix": "Desc-",
 			"body": [
-				"//Desclarar variables",
+				"//Declarar variables",
 				"//Descripción del programa y entrada de datos",
 				"//Comprobación de datos",
 				"//Resolución del problema",]
