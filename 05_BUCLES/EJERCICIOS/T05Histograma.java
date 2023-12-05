@@ -16,33 +16,68 @@ public class T05Histograma {
 
         //Declarar variables
         boolean continuar = true;
-
+        int columnas = 0;
+        int numeroTotal = 0;
+        int numeroVolteado = 0;
+        int numeroDigitos = 0;
+        int digito = 0;
+        
         //Descripción del programa y entrada de datos
-        System.out.println("Este programa te va a representar una serie de números en carácteres.");
-        System.out.print("Introduzca un carácter: ");
-        char caracter = s.next().charAt(0);
-        System.out.println("Introduzca números enteros positivos. Cuando no quiera introducir más números, introduzca un número negativo.");
-        System.out.println("");
-
-        try {
-            while (continuar) {
-                try {
-                    int numero = s.nextInt();
-                    if (numero > 0) {
-                        System.out.print("|" + " ");
-                        for (int i = 0; i < numero; i++) {
-                            System.out.print(caracter + " ");
-                        }
-                        System.out.println();
-                    } else {
-                        continuar = false;
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Error: Ingresa un número entero válido.");
+        System.out.println("Introduzca números entre 0 y 9, y pulsa INTRO. Introduce un número negativo si desea parar.");
+        while (continuar) {
+            int numeroIntroducido = s.nextInt();
+            if (numeroIntroducido > 9) {
+                System.out.println("El número introducido no es válido, introduzca otro número.");
+            } else if (numeroIntroducido >= 0) {
+                if (numeroIntroducido > columnas) {
+                    columnas = numeroIntroducido;
                 }
+                numeroTotal = numeroIntroducido + (numeroTotal*10);
+            } else {
+                continuar = false; 
             }
-        } finally {
-            s.close(); // Cierra el Scanner al finalizar
         }
-    }
+        s.close();
+
+        //Dar la vuelta al número
+        while (numeroTotal > 0) {
+        numeroVolteado = (numeroVolteado*10) + (numeroTotal%10);
+        numeroTotal /= 10;
+        numeroDigitos++;
+        }
+        
+        // Creación del histograma
+        columnas += 1; //Al número más alto se le suma uno para que haya una columna superior.
+
+        for (int j = 0; j < numeroDigitos; j++) {
+            digito = numeroVolteado%10; // Se va separando cada dígito para crear la tabla
+            numeroVolteado/=10;
+            
+            // Parte de arriba de la cuadrícula
+            for (int i = 0; i < columnas; i++) {
+                    System.out.print(" ---");       
+            }
+            System.out.println("");
+
+            // Número en la cuadrícula
+            System.out.print("| " + digito + " |" );
+
+            // Asteriscos en la cuadrícula
+            for (int i = 0; i < digito; i++) { 
+                System.out.print(" * |");
+            }
+
+            // Terminar la cuadrícula
+            for (int i = digito+2; i < columnas+1; i++) {  //A dígito se le suma dos por las separaciones en número de cuadrícula, y a columnas se le suma 1 porque así da el total de separaciones.
+                System.out.print("   |");
+            }
+
+            System.out.println("");
+        }
+
+        // Parte de abajo de la cuadrícula
+        for (int i = 0; i < columnas; i++) {
+                System.out.print(" ---");       
+        }
+    }    
 }
