@@ -18,7 +18,7 @@
 
 	"Autor": {
 		"scope": "java",
-		"prefix": "autor-",
+		"prefix": "Autor-",
 		"body": [
 			"/**",
 			"*",
@@ -39,7 +39,7 @@
 
 	"Descripciones": {
 			"scope": "java",
-			"prefix": "Desc-",
+			"prefix": "Descripciones-",
 			"body": [
 				"//Declarar variables",
 				"//Descripción del programa y entrada de datos",
@@ -49,10 +49,30 @@
 
 	"Dar la vuelta a un número": {
 			"scope": "java",
-			"prefix": "Invertir-",
+			"prefix": "InvertirNumero-",
 			"body": [
-				"//while (numero > 0) {",
-				"//numeroAlReves = (numeroAlReves*10) + (numero%10);",
-				"//numero /= 10;",]
+				"while (numero > 0) {",
+				"numeroVolteado = (numeroVolteado*10) + (numero%10);",
+				"numero /= 10;",]
+		}
+
+	"Numero primo": {
+			"scope": "java",
+			"prefix": "Primos-",
+			"body": [
+				"boolean esPrimo = true;"
+				"if (numero <= 1) {",
+				"esPrimo = false;",
+				"} else if (numero == 2) {",
+				"// 2 es primo",
+				"} else if (numero % 2 == 0) {",
+				"esPrimo = false;",
+				"} else {",
+				"for (int j = 3; j <= Math.sqrt(i); j += 2) {",
+				"if ((numero % j) == 0) {",
+				"esPrimo = false;",
+				"}",
+				"}",
+				"}",]
 		}
 }
