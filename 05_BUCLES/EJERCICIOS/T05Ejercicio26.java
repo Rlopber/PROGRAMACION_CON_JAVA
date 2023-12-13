@@ -27,6 +27,7 @@ public class T05Ejercicio26 {
 
         //Averiguar la posición
         int numero = numeroIntroducido; //Para no modificar el valor de numeroIntroducido creamos una varaible auxiliar.
+        int numeroOriginal = numeroIntroducido;
 
         if (numero < 10) {
             System.out.println("Tu número tiene una cifra, así que la posición es 1.");
@@ -54,7 +55,7 @@ public class T05Ejercicio26 {
 
         System.out.println();
         if (encontrado) { 
-            System.out.println("El número elegido es " + numeroIntroducido + " y el dígito elegido es el " + digito + ".");
+            System.out.println("El número elegido es " + numeroOriginal + " y el dígito elegido es el " + digito + ".");
             System.out.println("La posición del dígito es la " + posicionDesdeIzquierda + "ª.");
            
         } else {
