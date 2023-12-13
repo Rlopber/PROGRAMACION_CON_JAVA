@@ -30,13 +30,9 @@ public class T05Ejercicio39 {
 
         //Factorial de un número 
         do {
-            if (numeroInicial == 0) {
-                System.out.println("!0 = 1"); // Caso especial para 0
-            } else {
             numeroInicial++;
             factorial *= numeroInicial;
-            System.out.println("!" + numeroInicial + " = " + factorial);
-            }  
+            System.out.println("!" + numeroInicial + " = " + factorial); 
         } while (numeroInicial < numeroFinal);
     }    
 }
