@@ -36,7 +36,7 @@ public class T05Ejercicio26 {
                 if ((numero % 10) == digito) {
                     encontrado = true;
                 } else {
-                numero = numero / 10;
+                numero /= 10;
                 posicion++;
                 }          
             }
