@@ -16,7 +16,7 @@ public class T05Ejercicio21 {
 
         //Desclarar variables
         int numero = 0;
-        int mayorPar = 0;
+        int mayorPar = -1;
         int sumaImpar = 0;
         int cantidadImpar = 0;
 
@@ -29,12 +29,12 @@ public class T05Ejercicio21 {
 
         //Comprobación de datos y resolución del problema
         while (numero >= 0) {
-                if (numero%2==0) {
-                    if (numero >= mayorPar) {
+                if (numero%2==0 || numero == 0) {
+                    if (numero >= mayorPar || numero == 0) {
                         mayorPar = numero;
                     }
                 } else {
-                    sumaImpar =+ numero;
+                    sumaImpar += numero;
                     cantidadImpar++;
             }
             numero = s.nextInt();
@@ -52,7 +52,7 @@ public class T05Ejercicio21 {
         }
 
         if (cantidadImpar >= 1) {
-        System.out.printf("La media de los números impares %.4f.\n", ((double)(sumaImpar/cantidadImpar)));
+        System.out.printf("La media de los números impares %.4f.\n", ((double)sumaImpar/(double)cantidadImpar));
         } else {
         System.out.println("No se introdujeron números impares.");
         }
