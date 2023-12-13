@@ -18,7 +18,7 @@ public class T05Ejercicio15 {
         // Declarar variables
          double base;
          int maxExponente;
-         double resultado = 0;
+         double resultado = 1;
          
         // Explicación del problema 
         System.out.println("  \033[1;46mCALCULADORA DE POTENCIAS\033[0m");
@@ -44,7 +44,7 @@ public class T05Ejercicio15 {
 
                 // Calcular y mostrar las potencias
                 for (int exponente = 1; exponente <= maxExponente; exponente++) {
-                    resultado = base*exponente;
+                    resultado *= base;
                     System.out.printf("%.4f ^ %d = %.4f\n", base, exponente, resultado);
                 }
             }
