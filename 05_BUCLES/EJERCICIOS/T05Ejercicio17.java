@@ -37,8 +37,8 @@ public class T05Ejercicio17 {
         auxiliarSuma = numIntroducido;
         
         for (int i = 1; i <= 100; i++) {  
-        sumaNumeros = sumaNumeros + (auxiliarSuma+1);
-        auxiliarSuma = (auxiliarSuma+1);
+        sumaNumeros += auxiliarSuma;
+        auxiliarSuma = auxiliarSuma+1;
         }
         
         System.out.printf("La suma de los 100 números a partir de %d es %d.", numIntroducido, sumaNumeros);
