@@ -3,18 +3,19 @@ package matematicas;
 /**
  * Funciones matemáticas de propósito general
  * 
- * @author Sergio Sánchez
+ * @author Raquel López
  */
+
 public class Varias {
 
   /**
    * Comprueba si un número entero positivo es primo o no.
-   * Un número es primo cuando únicamente es divisible entre
-   * él mismo y la unidad.
+   * Un número es primo cuando únicamente es divisible entre él mismo y la unidad.
    * 
    * @param x un número entero positivo
    * @return boolean <code>true</code> si el número es primo o <code>false</code> en caso contrario
    */
+
   public static boolean esPrimo(int x) {
     
         if (x < 0) {
@@ -36,6 +37,7 @@ public class Varias {
         return true;
    }
 
+
   /**
    * Devuelve el número de dígitos que contiene un número entero
    * 
@@ -43,22 +45,24 @@ public class Varias {
    * @return int la cantidad de dígitos que contiene el número
    */
     public static int contarDigitos(int x) {
-    
+        
+        x = Math.abs(x);
+
         if (x == 0) {
-        return 1;
+            return 1;
         } else {
-        int n = 0;
-        while (x > 0) {
-            x /= 10;
-            n++;
+            int n = 0;
+            while (x > 0) {
+                x /= 10;
+                n++;
         }
-        return n;
+            return n;
         }
     }
 
     
     /** 
-     * Voltear un número introducido por teclado.
+     * Voltear un número introducido por teclado tipo long.
      * @param x un número entero
      * @return long el número volteado
      * 
@@ -75,7 +79,57 @@ public class Varias {
             numeroVolteado = (numeroVolteado * 10) + (x % 10);
             x /= 10;
         }
-
+        System.out.println("Esta es la función que devuelve un long.");
         return numeroVolteado;
+    }
+
+    
+    /** 
+     * 
+     * Voltear un número introducido por teclado tipo int.
+     * @param x un número entero
+     * @return int el número volteado
+     */
+    public static int voltea(int x) {
+        System.out.println("Esta el la función que devuelve un int.");
+        return (int) voltea((long)x);
+    }
+
+
+    
+    /** 
+     * 
+     * Decir si un número es o no capicua.
+     * @param x un número entero
+     * @return boolean true o false
+     */
+
+    public static boolean esCapicua(long x) {
+        return x == voltea(x);
+
+        // x = 1234
+        // voltea(x) = 4321
+        // x == voltea(x) --> False
+        // return false;
+    }
+
+    /** 
+     * 
+     * Decir si un número es o no capicua.
+     * @param x un número entero
+     * @return boolean true o false
+     */
+
+    public static boolean esCapicua(int x) {
+        return  esCapicua((long)x);
+    }
+
+    public static int siguientePrimo(int x) {
+
+        do {
+            x++;
+        } while (!esPrimo(x));
+
+        return x;
     }
 }
