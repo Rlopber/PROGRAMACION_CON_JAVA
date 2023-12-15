@@ -56,15 +56,20 @@ public class Varias {
         }
     }
 
+    
     /** 
-    * Invertir un número.
-    * @param x un número entero positivo
-    * @return int el número invertido
-    *
-    */
+     * Voltear un número introducido por teclado.
+     * @param x un número entero
+     * @return long el número volteado
+     * 
+     */
 
-    public static long invertirNumero(long x) {
+    public static long voltea(long x) {
         
+        if (x < 0) {
+            return -voltea(-x); //Esta es la opción para cuando el número es negativo. Si sólo se pone el -x, te da positivo, por eso se pone otro - en voltea.
+        }
+
         long numeroVolteado = 0;
         while (x > 0) {
             numeroVolteado = (numeroVolteado * 10) + (x % 10);
@@ -72,21 +77,5 @@ public class Varias {
         }
 
         return numeroVolteado;
-    }
-
-    /** 
-    * Saber si un número es par o impar.
-    * @param x un número entero positivo
-    * @return boolean <code>true</code> si el número es par o <code>false</code> en de impar
-    *
-    */
-
-    public static boolean Par_Impar(int x) {
-
-        if (x % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }

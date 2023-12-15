@@ -15,6 +15,7 @@ public class PruebaFunciones {
           System.out.println("El " + n + " no es primo.");
         }
 
+       
         //Prueba de contarDigitos() alojada en la clase Varias dentro del paquete matemáticas.
         System.out.print("Introduzca un número entero positivo: ");
         n = Integer.parseInt(System.console().readLine());
@@ -22,6 +23,7 @@ public class PruebaFunciones {
         int numDigitos = Varias.contarDigitos(n);
         System.out.println(n + " tiene " + numDigitos + " dígitos.");
 
+        
         //Prueba de volumenCilindro()
         double r;
         double h;
@@ -33,13 +35,13 @@ public class PruebaFunciones {
 
         System.out.println("El volumen del cilindro es " + Volumen.volumenCilindro(r, h) + "u^3");
 
-        //Prueba de invertir un número
 
+        //Prueba de invertir un número
         long numero;
 
         System.out.print("Introduce un número entero positivo y te lo voltearé: ");
         numero = Long.parseLong(System.console().readLine());
 
-        System.out.println("EL número " + numero + " invertido es " + Varias.invertirNumero(numero));
+        System.out.println("EL número " + numero + " invertido es " + Varias.voltea(numero));
     }
 }
