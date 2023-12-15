@@ -90,5 +90,18 @@ public class PruebaFunciones {
         } else {
             System.out.println("El número es impar.");
         }
+
+        // Prueba de numerosAmigos
+
+        System.out.print("Introduce un número para conocer si es amigo: ");
+        int x = Integer.parseInt(System.console().readLine());
+        System.out.print("Introduce otro número para conocer si es amigo: ");
+        int y = Integer.parseInt(System.console().readLine());
+
+        if (Varias.numerosAmigos(x, y)) {
+            System.out.println("Los números son amigos.");
+        } else {
+            System.out.println("Los número no son amigos.");
+        }
     }
 }
