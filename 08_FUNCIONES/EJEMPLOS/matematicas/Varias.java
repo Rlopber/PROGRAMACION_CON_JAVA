@@ -124,6 +124,14 @@ public class Varias {
         return  esCapicua((long)x);
     }
 
+    
+    /** 
+     * 
+     * Función para averiguar el siguiente primo desde un número introducido por teclado.
+     * @param x un número entero
+     * @return int siguiente primo
+     */
+    
     public static int siguientePrimo(int x) {
 
         do {
