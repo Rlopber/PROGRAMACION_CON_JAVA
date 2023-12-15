@@ -117,7 +117,7 @@ public class Varias {
      * 
      * Decir si un número es o no capicua.
      * @param x un número entero
-     * @return boolean true o false
+     * @return boolean true si es capicua, false si no es capicua.
      */
 
     public static boolean esCapicua(int x) {
@@ -131,7 +131,7 @@ public class Varias {
      * @param x un número entero
      * @return int siguiente primo
      */
-    
+
     public static int siguientePrimo(int x) {
 
         do {
@@ -140,4 +140,18 @@ public class Varias {
 
         return x;
     }
+
+    
+    /** 
+     * 
+     * Función para saber si un número es par.
+     * @param x un número entero
+     * @return boolean true si es par, false si es impar.
+     */
+
+    public static boolean esPar(int x) {
+        return x % 2 == 0;
+    }
+
+    
 }

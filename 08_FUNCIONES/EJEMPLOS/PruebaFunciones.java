@@ -78,5 +78,17 @@ public class PruebaFunciones {
         n = Integer.parseInt(System.console().readLine());
         
         System.out.println("El siguiente primo tras " + n + " es " + Varias.siguientePrimo(n));
+
+
+        // Prueba de esPar
+
+        System.out.print("Introduce un número y te diré si es par: ");
+        n = Integer.parseInt(System.console().readLine());
+
+        if (Varias.esPar(n)) {
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número es impar.");
+        }
     }
 }
