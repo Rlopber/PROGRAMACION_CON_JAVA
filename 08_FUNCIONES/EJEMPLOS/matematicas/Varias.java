@@ -167,4 +167,27 @@ public class Varias {
     public static boolean numerosAmigos(int x, int y) {
         return (x == sumaDivisoresPropios(y) && y == sumaDivisoresPropios(x));
     }
+
+    public static double potencia(int x, int y) {
+        return Math.pow(x, y);
+    }
+
+    public static double posicionDeDigito(int numero, int digito) {
+        numero = voltea(numero);
+        int posicion = 1;
+
+        while (numero != 0) {
+            if (numero%10 == digito) {
+                return (double) posicion;
+            } else {
+                numero /= 10;
+                posicion++;
+            }
+        }
+        return -1;
+    }
+
+     public static double posicionDeDigito(long numero, int digito) {
+        return (posicionDeDigito((long)numero, digito));
+     }
 }
