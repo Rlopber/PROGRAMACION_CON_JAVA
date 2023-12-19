@@ -79,7 +79,6 @@ public class Varias {
             numeroVolteado = (numeroVolteado * 10) + (x % 10);
             x /= 10;
         }
-        System.out.println("Esta es la función que devuelve un long.");
         return numeroVolteado;
     }
 
@@ -91,7 +90,6 @@ public class Varias {
      * @return int el número volteado
      */
     public static int voltea(int x) {
-        System.out.println("Esta el la función que devuelve un int.");
         return (int) voltea((long)x);
     }
 
@@ -187,7 +185,27 @@ public class Varias {
         return -1;
     }
 
-     public static double posicionDeDigito(long numero, int digito) {
+    public static double posicionDeDigito(long numero, int digito) {
         return (posicionDeDigito((long)numero, digito));
-     }
+    }
+
+    public static int pegaPorDetras(int x, int y){
+        return (x*10) + y;
+    }
+
+    public static int pegaPorDelante(int x, int y) {
+        return (voltea(pegaPorDetras(voltea(x), y)));
+    }  
 }
+
+/* 7. digitoN: Devuelve el dígito que está en la posición digitos de un número entero.
+Se empieza contando por el 0 y de izquierda a derecha.
+9. quitaPorDetras: Le quita a un número digitos dígitos por detrás (por la
+derecha).
+10. quitaPorDelante: Le quita a un número digitos dígitos por delante (por la
+izquierda).
+
+13. trozoDeNumero: Toma como parámetros las posiciones inicial y final
+dentro de un número y devuelve el trozo correspondiente.
+14. juntaNumeros: Pega dos números para formar uno.
+*/
