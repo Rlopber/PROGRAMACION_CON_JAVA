@@ -151,6 +151,13 @@ public class Varias {
         return x % 2 == 0;
     }
 
+    /** 
+     * 
+     * Función para realizar la suma de los divisores propios de un número.
+     * @param x un número entero
+     * @return la suma de los divisores
+     */
+
     public static int sumaDivisoresPropios(int x) {
         int suma = 0;
         for (int i = 1; i < x; i++) {
@@ -162,14 +169,35 @@ public class Varias {
         return suma;
     }
 
+    /** 
+     * Función para saber si dos números son amigos entre sí.
+     * @param x es la suma de los divisores propios de un número.
+     * @param y es la suma de los divisores propios de un número.
+     * @return boolean true sin son números amigos y false si no lo son.
+     */
     public static boolean numerosAmigos(int x, int y) {
         return (x == sumaDivisoresPropios(y) && y == sumaDivisoresPropios(x));
     }
 
+
+    
+    /** 
+     * Función para realizar potencias.
+     * @param x es la base de la potencia.
+     * @param y es el exponente de la potencia.
+     * @return double resultado de la potencia.
+     */
     public static double potencia(int x, int y) {
         return Math.pow(x, y);
     }
 
+    
+    /** 
+     * Función para saber si el dígito está en el número dado y en qué posición en un int.
+     * @param numero es el número donde hay que buscar.
+     * @param digito el dígito es el número a encontrar
+     * @return double de la posición en la que se encuentra el dígito.
+     */
     public static double posicionDeDigito(int numero, int digito) {
         numero = voltea(numero);
         int posicion = 1;
@@ -185,27 +213,95 @@ public class Varias {
         return -1;
     }
 
+    
+    /** 
+     * Función para saber si el dígito está en el número dado y en qué posiciónen un long.
+     * @param numero es el número donde hay que buscar.
+     * @param digito el dígito es el número a encontrar
+     * @return double de la posición en la que se encuentra el dígito.
+     */
     public static double posicionDeDigito(long numero, int digito) {
         return (posicionDeDigito((long)numero, digito));
     }
 
-    public static int pegaPorDetras(int x, int y){
+    
+    /** 
+     * Función para colocar un dígito al final de otro número int.
+     * @param x es el número.
+     * @param y es el dígito a colocar.
+     * @return int en número con el dígito colocado al final.
+     */
+    public static int pegaPorDetras(int x, int y) {
         return (x*10) + y;
     }
 
+    /** 
+     * Función para colocar un dígito al principio de otro número int.
+     * @param x es el número.
+     * @param y es el dígito a colocar.
+     * @return int en número con el dígito colocado al principio.
+     */
     public static int pegaPorDelante(int x, int y) {
         return (voltea(pegaPorDetras(voltea(x), y)));
-    }  
+    }
+
+    /** 
+     * Función que quita un número de dígitos de un número por detrás.
+     * @param x es el número.
+     * @param y es el número de dígitos a quitar.
+     * @return int es el número con y dígitos quitados por detrás.
+     */
+    public static int quitaPorDetras(int x, int y) {
+        for (int i = 0; i < y; i++) {
+            x /= 10;
+        } 
+        return x;
+    }
+
+    /** 
+     * Función que quita un número de dígitos de un número por delante.
+     * @param x es el número.
+     * @param y es el número de dígitos a quitar.
+     * @return int es el número con y dígitos quitados por delante.
+     */
+    public static int quitaPorDelante(int x, int y) {
+        return (voltea(quitaPorDetras(voltea(x), y)));
+    }
+
+    /** 
+     * Función para saber que número está en la posición dada, iniciando en 0.
+     * @param x es el número.
+     * @param y es la posición.
+     * @return int es el número en la posición dada.
+     */
+    public static int digitoN(int x, int y) {
+        x = voltea(x);
+        int auxiliar = 0;
+        for (int i = -1; i < y; i++) {
+            auxiliar = x % 10;
+            x /= 10;
+        }
+        return auxiliar;
+    }
+
+    /** 
+     * Función para devolver un trozo de número teniendo en cuenta una posición inicial y otra final.
+     * @param x es el número original
+     * @param y es la posición por detrás.
+     * @param z es la posición por delante.
+     * @return int es el trozo que queda al quitar las posiciones.
+     */
+    public static int trozoDeNumero(int x, int y, int z) {
+        return quitaPorDelante(quitaPorDetras(x, y), z);
+    }
+
+    /** 
+     * Función para juntar dos números dados.
+     * @param x es el primer número
+     * @param y es el segundo número
+     * @return int es la unión de ambos números.
+     */
+    public static int juntaNumeros(int x, int y) {
+        return (x * (int)(potencia(10, contarDigitos(y))) + y);
+    }
 }
-
-/* 7. digitoN: Devuelve el dígito que está en la posición digitos de un número entero.
-Se empieza contando por el 0 y de izquierda a derecha.
-9. quitaPorDetras: Le quita a un número digitos dígitos por detrás (por la
-derecha).
-10. quitaPorDelante: Le quita a un número digitos dígitos por delante (por la
-izquierda).
-
-13. trozoDeNumero: Toma como parámetros las posiciones inicial y final
-dentro de un número y devuelve el trozo correspondiente.
-14. juntaNumeros: Pega dos números para formar uno.
-*/
