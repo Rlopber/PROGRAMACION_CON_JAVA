@@ -73,19 +73,9 @@ public class funcionesMates {
 }
 
 /*
- * 
- * 1. esCapicua: Devuelve verdadero si el número que se pasa como parámetro
-es capicúa y falso en caso contrario.
-
-3. siguientePrimo: Devuelve el menor primo que es mayor al número que
-se pasa como parámetro.
-4. potencia: Dada una base y un exponente devuelve la potencia.
-
 
 7. digitoN: Devuelve el dígito que está en la posición digitos de un número entero.
 Se empieza contando por el 0 y de izquierda a derecha.
-8. posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
-dentro de un número entero. Si no se encuentra, devuelve -1.
 9. quitaPorDetras: Le quita a un número digitos dígitos por detrás (por la
 derecha).
 10. quitaPorDelante: Le quita a un número digitos dígitos por delante (por la
