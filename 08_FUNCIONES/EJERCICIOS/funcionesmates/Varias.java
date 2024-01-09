@@ -41,8 +41,8 @@ public class Varias {
   /**
    * Devuelve el número de dígitos que contiene un número entero
    * 
-   * @param x un número entero
-   * @return int la cantidad de dígitos que contiene el número
+   * @param x un número entero (int)
+   * @return int la cantidad de dígitos que contiene el número.
    */
     public static int contarDigitos(int x) {
         
@@ -59,6 +59,17 @@ public class Varias {
             return n;
         }
     }
+
+
+    /**
+     * Devuelve el número de dígitos que contiene un número entero.
+     * 
+     * @param x un número entero (long)
+     * @return int la cantidad de dígitos que contiene el número.
+     */
+        public static int contarDigitos(long x) {
+            return contarDigitos((int)x);
+        }
 
     
     /** 
@@ -97,7 +108,7 @@ public class Varias {
     
     /** 
      * 
-     * Decir si un número es o no capicua.
+     * Decir si un número es o no capicua para un long.
      * @param x un número entero
      * @return boolean true o false
      */
@@ -113,7 +124,7 @@ public class Varias {
 
     /** 
      * 
-     * Decir si un número es o no capicua.
+     * Decir si un número es o no capicua para un int.
      * @param x un número entero
      * @return boolean true si es capicua, false si no es capicua.
      */
@@ -303,5 +314,30 @@ public class Varias {
      */
     public static int juntaNumeros(int x, int y) {
         return (x * (int)(potencia(10, contarDigitos(y))) + y);
+    }
+
+    /** 
+     * Función para saber si un número es binario verificando si está compuesto por dígitos de 0 o 1.
+     * @param x es el número a comprobar int.
+     * @return boolean si es o no binario.
+     */
+    public static boolean esBinario(int x) {
+        while (x > 0) {
+            int digito = x % 10;
+            if (digito != 0 && digito != 1) {
+                return false;
+            }
+            x /= 10;
+        }
+        return true;
+    }
+
+     /** 
+     * Función para saber si un número es binario verificando si está compuesto por dígitos de 0 o 1.
+     * @param x es el número a comprobar long.
+     * @return boolean si es o no binario.
+     */
+    public static boolean esBinario(long x) {
+        return esBinario((int) x);
     }
 }
