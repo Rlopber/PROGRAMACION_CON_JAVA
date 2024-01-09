@@ -26,15 +26,15 @@ public class T08Ejercicio17 {
 
         do {
             binario = s.nextLong();
-            if (!Varias.esBinario(binario)) {
+            if (!CalcularConBases.esBinario(binario)) {
                 System.out.println("Error = La entrada no es un número válido. Vuelva a intentarlo.");
             }
-        } while (!Varias.esBinario(binario));
+        } while (!CalcularConBases.esBinario(binario));
 
         s.close();
 
         //Comprobación de datos
-        decimal = Varias.BinarioADecimal(binario);
+        decimal = CalcularConBases.BinarioADecimal(binario);
 
         //Resolución del problema
         System.out.println("El número binario " + binario + " es " + decimal + " en decimal.");

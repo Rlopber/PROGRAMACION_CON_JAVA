@@ -35,7 +35,7 @@ public class T08Ejercicio18 {
 
         //Comprobación de datos
             
-        binario = Varias.DecimalABinario(decimal);
+        binario = CalcularConBases.DecimalABinario(decimal);
 
         //Resolución del problema
         System.out.println("El número decimal " + decimal + " es " + binario + " en binario.");
