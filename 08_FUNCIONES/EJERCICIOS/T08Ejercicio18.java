@@ -18,8 +18,7 @@ public class T08Ejercicio18 {
         //Declarar variables
         int decimal;
         int digito;
-        long binario = 0;
-        int exponente = 0;
+        String binario = "";
 
         //Descripción del programa y entrada de datos
         
@@ -41,16 +40,16 @@ public class T08Ejercicio18 {
         do {
             digito = copiaDecimal % 2;
             if (digito == 0) {
-                binario += digito * Varias.potencia(10, exponente);
+                binario = "0" + binario;
             } else {
-                binario *= 10;
-            }
-            
-            copiaDecimal /= 2;
-            exponente++;    
+                binario = "1" + binario;
+            } 
+            copiaDecimal /= 2; 
         } while (copiaDecimal != 0); 
 
+        long binarioLong = Long.parseLong(binario);
+
         //Resolución del problema
-        System.out.println("El número decimal " + decimal + " es " + binario + " en binario.");
+        System.out.println("El número decimal " + decimal + " es " + binarioLong + " en binario.");
     }    
 }
