@@ -1,6 +1,8 @@
 {
     "java.project.sourcePaths": [
         "08_FUNCIONES\\EJEMPLOS",
-        "08_FUNCIONES\\EJERCICIOS"
+        "08_FUNCIONES\\EJERCICIOS",
+        "05_BUCLES\\EJERCICIOS",
+        "05_BUCLES\\EJEMPLOS"
     ]
 }
