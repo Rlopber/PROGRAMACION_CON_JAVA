@@ -340,4 +340,22 @@ public class Varias {
     public static boolean esBinario(long x) {
         return esBinario((int) x);
     }
+
+    public static long DecimalABinario(int x) {
+        int digito;
+        String binario = "";
+        do {
+            digito = x % 2;
+            if (digito == 0) {
+                binario = "0" + binario;
+            } else {
+                binario = "1" + binario;
+            } 
+            x /= 2; 
+        } while (x != 0); 
+
+        long binarioLong = Long.parseLong(binario);
+
+        return binarioLong;
+    }
 }
