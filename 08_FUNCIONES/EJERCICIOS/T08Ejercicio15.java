@@ -10,7 +10,8 @@ import funcionesmates.Varias;
 public class T08Ejercicio15 {
     public static void main(String[] args) {
     
-        for (int i = 1; i < 1000; i++) {
+        //Hacer bucle del 1 al 1000 y usar funcion de esPrimo para saber presentar en pantalla sólo los números primos.
+        for (int i = 1; i <= 1000; i++) {
             if (Varias.esPrimo(i)) {
                 System.out.print(i + " ");
             }
