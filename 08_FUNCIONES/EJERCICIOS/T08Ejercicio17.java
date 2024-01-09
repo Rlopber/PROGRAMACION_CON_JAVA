@@ -22,7 +22,7 @@ public class T08Ejercicio17 {
         //Descripción del programa y entrada de datos
         
         Scanner s = new Scanner(System.in);
-        System.out.println("Introduzca el número binario: ");
+        System.out.print("Introduzca el número binario: ");
 
         do {
             binario = s.nextLong();
