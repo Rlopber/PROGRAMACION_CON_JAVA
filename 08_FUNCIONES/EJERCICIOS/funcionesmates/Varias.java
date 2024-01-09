@@ -338,7 +338,14 @@ public class Varias {
      * @return boolean si es o no binario.
      */
     public static boolean esBinario(long x) {
-        return esBinario((int) x);
+        while (x > 0) {
+            int digito = (int)(x % 10);
+            if (digito != 0 && digito != 1) {
+                return false;
+            }
+            x /= 10;
+        }
+        return true;
     }
 
     public static long DecimalABinario(int x) {
@@ -357,5 +364,23 @@ public class Varias {
         long binarioLong = Long.parseLong(binario);
 
         return binarioLong;
+    }
+    
+        public static int BinarioADecimal(long x) {
+            int digito;
+            int base = 0;
+            int decimal = 0;
+
+            do {
+                digito = (int)x%10;
+                x /= 10;
+
+                if (digito == 1) {
+                    decimal += (int)(1 * Varias.potencia(2, base));
+                }
+                base += 1;
+            } while (x > 0);
+
+            return decimal;
     }
 }
