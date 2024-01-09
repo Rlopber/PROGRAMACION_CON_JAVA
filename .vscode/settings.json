@@ -1,7 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "08_FUNCIONES\\EJEMPLOS",
-        "08_FUNCIONES\\EJERCICIOS",
         "07_ARRAYS\\EJEMPLOS",
         "07_ARRAYS\\EJERCICIOS"
     ]
