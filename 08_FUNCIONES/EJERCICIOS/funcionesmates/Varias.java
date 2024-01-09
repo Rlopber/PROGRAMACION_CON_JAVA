@@ -243,7 +243,7 @@ public class Varias {
      * @return int en número con el dígito colocado al final.
      */
     public static int pegaPorDetras(int x, int y) {
-        return x * 10 + y;
+        return (x * 10) + y;
     }
 
     /** 
