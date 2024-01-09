@@ -11,14 +11,13 @@ import java.util.Scanner;
 public class T08Ejercicio18 {
     public static void main(String[] args) {
 
-        System.out.println("CALCULADORA DE DECIMAL A BINARIO");
-        System.out.println("================================");
+        System.out.println("  \033[1;46mDE DECIMAL A BINARIO\033[0m");
+        System.out.println("=======================");
         System.out.println("");
 
         //Declarar variables
         int decimal;
-        int digito;
-        String binario = "";
+        long binario;
 
         //Descripción del programa y entrada de datos
         
@@ -35,21 +34,10 @@ public class T08Ejercicio18 {
         s.close();
 
         //Comprobación de datos
-        int copiaDecimal = decimal; // Se hace una copia para no perder el número original        
-
-        do {
-            digito = copiaDecimal % 2;
-            if (digito == 0) {
-                binario = "0" + binario;
-            } else {
-                binario = "1" + binario;
-            } 
-            copiaDecimal /= 2; 
-        } while (copiaDecimal != 0); 
-
-        long binarioLong = Long.parseLong(binario);
+            
+        binario = Varias.DecimalABinario(decimal);
 
         //Resolución del problema
-        System.out.println("El número decimal " + decimal + " es " + binarioLong + " en binario.");
+        System.out.println("El número decimal " + decimal + " es " + binario + " en binario.");
     }    
 }
