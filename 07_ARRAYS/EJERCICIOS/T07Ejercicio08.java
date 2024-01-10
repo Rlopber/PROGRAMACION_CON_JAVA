@@ -25,6 +25,7 @@ public class T07Ejercicio08 {
             System.out.print("Introduce la temperatura del mes de " + mes[i] + ": ");
             temperatura[i] = s.nextInt();
         }
+        s.close();
         
         //Mostrar por pantalla en forma de histograma
         for (int i = 0; i < mes.length; i++) {
@@ -35,6 +36,5 @@ public class T07Ejercicio08 {
             }
             System.out.println();
         }
-        s.close();
     }
 }
