@@ -1,3 +1,4 @@
+package ArrayUnidimensional;
 /**
 *
 * Realiza un programa que pida la temperatura media que ha hecho en cada mes de un determinado año 

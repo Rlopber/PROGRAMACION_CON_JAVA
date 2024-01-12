@@ -1,3 +1,4 @@
+package ArrayUnidimensional;
 /**
 *
 * Realiza un programa que sea capaz de insertar un número en una posición concreta de un array. 
@@ -42,6 +43,7 @@ public class T07Ejercicio19 {
         num[posicion] = numero;
 
         //Mostramos por pantalla el resultado
+        System.out.println("");
         System.out.println("Array nuevo: ");
         System.out.print("Índice ");
         for (int i = 0; i < num.length; i++) {
