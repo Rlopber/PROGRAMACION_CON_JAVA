@@ -20,7 +20,6 @@ public class T07Ejercicio06 {
       // Genera el contenido del array sin que se repita ningún valor
       boolean repetido;
       int i;
-      int j;
         
     for(fila = 0; fila < num.length; fila++) {
         for(columna = 0; columna < num[fila].length; columna++) {
