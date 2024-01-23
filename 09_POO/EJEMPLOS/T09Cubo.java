@@ -55,7 +55,7 @@ public class T09Cubo {
             if (this.contenido >= nivel) {
             System.out.println("#~~~~#");
             } else {
-            System.out.println("# #");
+            System.out.println("#    #");
             }
         }
         System.out.println("######");
