@@ -62,6 +62,3 @@ public class T07Ejercicio03 {
         System.out.printf(" \033[1;31mT %6d\033[0m |", sumaTotal);
     }
 }
-
-
-

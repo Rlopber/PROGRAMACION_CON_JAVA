@@ -3,6 +3,9 @@
         "07_ARRAYS\\EJEMPLOS",
         "07_ARRAYS\\EJERCICIOS",
         "09_POO\\EJEMPLOS",
-        "09_POO\\EJERCICIOS"
-    ]
+        "09_POO\\EJERCICIOS",
+        "04_SENTENCIAS_CONDICIONAL\\EJERCICIOS",
+        "09_POO\\EJEMPLOS\\JUEGO_CARTAS"
+    ],
+    "terminal.integrated.detectLocale": "auto"
 }
