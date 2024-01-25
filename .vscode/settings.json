@@ -1,11 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "07_ARRAYS\\EJEMPLOS",
-        "07_ARRAYS\\EJERCICIOS",
-        "09_POO\\EJEMPLOS",
-        "09_POO\\EJERCICIOS",
-        "04_SENTENCIAS_CONDICIONAL\\EJERCICIOS",
-        "09_POO\\EJEMPLOS\\JUEGO_CARTAS"
+        "09_POO\\JUEGO_CARTAS",
+        "09_POO\\EJEMPLOS"
     ],
     "terminal.integrated.detectLocale": "auto"
 }
