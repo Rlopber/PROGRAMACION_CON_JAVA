@@ -7,8 +7,7 @@ public class jugador {
     private double fondos;
     mano mano;
 
-    public jugador(String nombre, double fondos, baraja baraja) {
-        this.baraja = baraja;
+    public jugador(String nombre, double fondos) {
         this.fondos = fondos;
         this.nombre = nombre;
         this.mano = new mano();

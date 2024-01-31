@@ -17,7 +17,7 @@ public class App {
         System.out.println("¿Y el otro jugador? Ah... ¡Soy yo!");
         String nombreJugador2 = "Ordenador";
 
-        jugador humano = new jugador(nombreJugador1, fondo, barajaEsp);
-        jugador ordenador = new jugador(nombreJugador2, 100, barajaEsp);
+        jugador humano = new jugador(nombreJugador1, fondo);
+        jugador ordenador = new jugador(nombreJugador2, 100);
     }
 }
