@@ -53,13 +53,25 @@ public class baraja {
         }
     }
 
-    public static void main(String[] args) {
+    //Extraer una carta de la baraja
+    public carta extraerCarta() {
+         if (numeroCartas > 0) {
+            return cartas[--numeroCartas];
+        } else {
+            return null; // En caso de que no haya más cartas en el mazo
+        }  
+    }
+
+
+    /* public static void main(String[] args) {
         baraja barajaEsp = new baraja();
         barajaEsp.inicializaBaraja();
         //barajaEsp.mostrarBaraja();
         barajaEsp.mezclarBaraja();
         barajaEsp.mostrarBaraja();
-    }
+        barajaEsp.extraerCarta();
+        
+    }*/
 }
 
 //Dar una puntuación a la carta

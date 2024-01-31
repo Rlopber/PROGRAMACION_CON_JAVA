@@ -25,3 +25,4 @@ replay_pid*
 
 # drive
 *.tmp.driveupload
+*.ini
