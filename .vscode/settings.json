@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "09_POO\\SIETEYMEDIO\\SieteYMedio",
-        "09_POO\\SIETEYMEDIO\\SieteYMedio\\src"
+        "09_POO\\EJERCICIOS"
     ],
     "terminal.integrated.detectLocale": "auto"
 }
