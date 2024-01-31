@@ -1,8 +1,8 @@
 public class baraja {
     
     //Atributo
-    public static String[] palos = new String[] {"Oros", "Bastos", "Espadas", "Copas"};
-    public static String[] numeros = new String[] {"1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"};
+    private String[] palos = new String[] {"Oros", "Bastos", "Espadas", "Copas"};
+    private String[] numeros = new String[] {"1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"};
     private carta[] cartas = new carta[40];
 
     double puntuacion;
@@ -14,26 +14,19 @@ public class baraja {
      }
 
     //Crear la baraja
-    private void inicializaBaraja() {
+    public void inicializaBaraja() {
         int contador = 0;
-  
-        while(contador < this.cartas.length) {
-           int index = (int)(Math.random() * (double)this.cartas.length);
-           String palo = palos[(int)(Math.random() * 4.0)];
-           boolean libre = true;
-  
-            for(int i = 0; i < contador && libre; ++i) {
-                if (this.cartas[i].getNumero().equals(numeros[index % 10]) && this.cartas[i].getPalo().equals(palo)) {
-                    libre = false;
+
+        do {
+            for (int i = 0; i < palos.length; i++) {
+                for (int j = 0; j < numeros.length; j++) {
+                    puntuacion = numeros[j].obtenerPuntuacion();
+                    this.cartas[contador] = new carta(palos[i], numeros[j], puntuacion);
+                    System.out.println(this.cartas[contador]);
+                    contador++;
                 }
             }
-  
-            if (libre) {
-                puntuacion = this.cartas[contador].obtenerPuntuacion();
-                this.cartas[contador] = new carta(palo, numeros[index % 10], puntuacion);
-                ++contador;
-            }
-        }
+        } while (contador < 40);
     }
 
     //Barajar las cartas

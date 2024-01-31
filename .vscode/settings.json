@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "09_POO\\JUEGO_CARTAS",
-        "09_POO\\EJEMPLOS"
+        "09_POO\\SIETEYMEDIO\\SieteYMedio",
+        "09_POO\\SIETEYMEDIO\\SieteYMedio\\src"
     ],
     "terminal.integrated.detectLocale": "auto"
 }

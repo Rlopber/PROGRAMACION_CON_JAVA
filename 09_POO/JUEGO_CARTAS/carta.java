@@ -7,11 +7,12 @@ public class carta {
 
     //Constructor
     public carta (String palo, String numero, double valor) {
-      this.palo = palo;
-      this.numero = numero;
-      this.valor = valor;
+        this.palo = palo;
+        this.numero = numero;
+        this.valor = valor;
     }
 
+    //Métodos getter
     public String getPalo() {
         return this.palo;
     }
@@ -33,12 +34,12 @@ public class carta {
         // Valor de la carta sota, caballo o rey = 0.5
         if (this.numero.equals("Sota") || this.numero.equals("Caballo") || this.numero.equals("Rey")) {
             return 0.5;
-        } else if ((Integer.parseInt(this.numero) >= 1) && (Integer.parseInt(this.numero) <= 7)) {
-            // Si es un número válido entre 1 y 7, se convierte a double y se devuelve
-            return Double.parseDouble(this.numero);
-        } else {
-            // En caso de otras cartas
-            throw new IllegalStateException("Número de carta inválido: " + this.numero);
+        } else { //El resto devuelve el valor del propio numero
+            try {
+                return Double.parseDouble(this.numero);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Número de carta no válido: " + this.numero);
+            }
         }
     }
 }

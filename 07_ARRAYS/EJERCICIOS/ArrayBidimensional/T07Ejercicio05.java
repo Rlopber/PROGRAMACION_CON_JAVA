@@ -40,7 +40,7 @@ public class T07Ejercicio05 {
 
         System.out.printf("       ");
         for (int i = 0; i < 10; i++) {
-            System.out.printf("%5d", i);
+            System.out.printf("%5d", i+1);
         }
         System.out.println();
 
@@ -51,7 +51,7 @@ public class T07Ejercicio05 {
 
         int barra = 0;
         for (fila = 0; fila < tabla.length; fila++) {
-            System.out.printf("%5d |", barra);
+            System.out.printf("%5d |", barra+1);
             barra++;
 
             for (columna = 0; columna < tabla[fila].length; columna++) {
