@@ -1,3 +1,4 @@
+package Ejercicio13;
 /**
 *
 * Implementa la clase CuentaCorriente. Cada cuenta corriente tiene un número de cuenta de 10 dígitos. 
@@ -12,7 +13,7 @@
 */
 
 public class CuentaCorriente {
-    private static String[] numerosCuentaGenerados = new String[10000];
+    private static String[] numerosCuentaGenerados = new String[10000]; //privada porque solo se usa en esta clase y estatica porque sólo tiene que realizarse una vez.
     private static int cuentasGeneradas = 0;
 
     ////Atributos
