@@ -12,19 +12,27 @@
 */
 
 public class CuentaCorriente {
-    
+    private static String[] numerosCuentaGenerados = new String[10000];
+    private static int cuentasGeneradas = 0;
+
     ////Atributos
     private String numero = "";
     private double saldo;
 
     ////Constructores
     public CuentaCorriente() {
-        generarAleatorio();
+        do {
+            generarAleatorio();
+        } while (existeNumeroGenerado());
+        agregarNumeroGenerado();
         saldo = 0;
     }
 
     public CuentaCorriente(double saldoInicial) { 
-        generarAleatorio();
+        do {
+            generarAleatorio();
+        } while (existeNumeroGenerado());
+        agregarNumeroGenerado();
         this.saldo = saldoInicial;
     }
 
@@ -32,6 +40,20 @@ public class CuentaCorriente {
         for (int i = 0; i < 10; i++) {
             numero += (int)(Math.random()*10);
         }
+    }
+
+    private boolean existeNumeroGenerado() {
+        for (int i = 0; i < cuentasGeneradas; i++) {
+            if (numerosCuentaGenerados[i].equals(numero)) { //Comparamos el array de cuentas con el numero generado aleatoriamente.
+                return true;                                // Si existe, el booleano es verdadero y se repetiria el proceso.
+            }
+        }
+        return false;                                       //Si no existe, el booleano es falso y se pararia el bucle en CuentaCorriente
+    }
+
+    private void agregarNumeroGenerado() {
+        numerosCuentaGenerados[cuentasGeneradas] = numero;
+        cuentasGeneradas++;
     }
 
     public void ingreso (double cantidad) {
