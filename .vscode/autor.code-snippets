@@ -82,4 +82,17 @@
 		"body": [
 			"//public static void main(String[] args) throws InterruptedException",
 			"//Thread.sleep(1000);",]
+	}
+
+	"POO": {
+		"scope": "java",
+		"prefix": "Atributos-",
+		"body": [
+			"////Atributos",
+			"////Constructores",
+			"////Métodos",
+			"////Getters",
+			"////Setters",
+			"////Override",]
+	}
 }
