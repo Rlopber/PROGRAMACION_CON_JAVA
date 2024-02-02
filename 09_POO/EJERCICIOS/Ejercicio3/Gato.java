@@ -27,11 +27,11 @@ public class Gato extends Mamifero {
 
     ////Métodos
     public void maullar() {
-        System.out.println("Miauuuu");
+        System.out.println("Miauuuu.");
     }
 
     public void ronronear() {
-        System.out.println("mrrrrrr");
+        System.out.println("mrrrrrr.");
     }
 
     ////Override

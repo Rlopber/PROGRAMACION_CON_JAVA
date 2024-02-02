@@ -4,6 +4,7 @@ public class Lagarto extends Animal {
     ////Atributos
     private String tipoEscamas;
     private boolean esVenenoso;
+    private int suerteCazando;
 
     ////Constructores
     public Lagarto(Sexo sexo, String tipoEscamas, boolean esVenenoso) {
@@ -46,8 +47,18 @@ public class Lagarto extends Animal {
 
     ////Override
     @Override
+    public String toString() {
+        return super.toString() + "\nTipo de escamas: " + tipoEscamas + "\n¿Es venenoso?: " + (esVenenoso ? "Si" : "No");
+    }
+
+    @Override
     public void comer(String comida) {
-        System.out.println("Está cazando.");
-        System.out.println("¡Ha atrapado un " + comida + "!");
+        System.out.println("Está cazando un " + comida);
+        suerteCazando = (int)(Math.random()*11);
+        if (suerteCazando < 5) {
+            System.out.println("¡Se ha escapado!");
+        } else {
+            System.out.println("¡Atrapado!");
+        }
     }
 }

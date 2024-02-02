@@ -21,11 +21,11 @@ public abstract class Animal {
     
     ////Métodos
     public void dormir () {
-        System.out.println("Está durmiendo, zzzzz");
+        System.out.println("Está durmiendo, zzzzz.");
     }
 
     public void comer (String comida) {
-        System.out.println("Está comiendo " + comida);
+        System.out.println("Está comiendo " + comida + ".");
     }
 
     public void reproduccion () {

@@ -6,7 +6,8 @@ public class PruebaAnimales {
         Perro Thor = new Perro(Sexo.MACHO, "Pelo corto", "Marrón claro", "Pitbull", 3, 10);
         Canario Cantarín = new Canario();
         Pingüino Pingu = new Pingüino(Sexo.HEMBRA, "Gris", 5, 15);
-        Lagarto Lenny = new Lagarto();
+        Lagarto Lenny = new Lagarto(Sexo.MACHO, "Escamas Grandes", false);
+        Cerdo Babe = new Cerdo();
 
         System.out.println(Misifú);
         System.out.println();
@@ -26,12 +27,16 @@ public class PruebaAnimales {
         System.out.println();
 
         System.out.println(Cantarín);
+        System.out.println();
+
         Cantarín.cantar();
         Cantarín.asear();
         Cantarín.reproduccion();
         System.out.println();
 
         System.out.println(Pingu);
+        System.out.println();
+
         Pingu.cantar();
         Pingu.nadar();
         Pingu.anidar();
@@ -39,9 +44,15 @@ public class PruebaAnimales {
         System.out.println();
 
         System.out.println(Lenny);
+        System.out.println();
+
+        Lenny.dormir();
         Lenny.tomarSol();
         Lenny.ataque();
         Lenny.comer("grillo");
+        System.out.println();
+
+        System.out.println(Babe);
         System.out.println();
     }
 }

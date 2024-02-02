@@ -16,23 +16,24 @@ public class Ave extends Animal{
 
     ////Métodos
     public void volar() {
-        System.out.println("Está volando");
+        System.out.println("Está volando.");
     }
 
     public void anidar() {
-        System.out.println("Está haciendo un nido");
+        System.out.println("Está haciendo un nido.");
         nido = true;
     }
 
     public void asear() {
-        System.out.println("Se está limpiando las plumas");
+        System.out.println("Se está limpiando las plumas.");
     }
     
     public void cantar() {
-        System.out.println("Está cantando");
+        System.out.println("Está cantando.");
     }
 
     ////Override
+    @Override
     public void reproduccion() {
         super.reproduccion();
         if (nido) {

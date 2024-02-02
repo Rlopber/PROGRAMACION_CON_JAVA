@@ -43,6 +43,7 @@ public class Perro extends Mamifero {
 
     @Override
     public void dormir() {
-        System.out.println("El perro está durmiendo en su cama.");
+        super.dormir();
+        System.out.println("Se ha quedado dormido en su cama.");
     }
 }
