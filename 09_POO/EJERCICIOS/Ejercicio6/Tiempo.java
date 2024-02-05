@@ -1,4 +1,4 @@
-package Ejercicio5;
+package Ejercicio6;
 
 public class Tiempo {
     ////Atributos
