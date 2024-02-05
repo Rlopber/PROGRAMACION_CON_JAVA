@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PruebaTiempo",
+            "request": "launch",
+            "mainClass": "Ejercicio5.PruebaTiempo",
+            "projectName": "PROGRAMACION_CON_JAVA_3ec6d695"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
