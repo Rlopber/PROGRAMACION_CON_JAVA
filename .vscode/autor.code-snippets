@@ -90,9 +90,9 @@
 		"body": [
 			"////Atributos",
 			"////Constructores",
-			"////Métodos",
 			"////Getters",
 			"////Setters",
+			"////Métodos",
 			"////Override",]
 	}
 }
