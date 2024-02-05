@@ -1,4 +1,4 @@
-package Ejercicio4;
+package Ejercicio5;
 
 public class PedidosPizza {
     public static void main(String[] args) {
