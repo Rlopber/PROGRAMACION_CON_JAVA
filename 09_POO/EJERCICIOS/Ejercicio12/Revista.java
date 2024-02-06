@@ -13,9 +13,6 @@ public class Revista extends Publicacion {
     ////Override
     @Override
     public String toString() {
-        return super.toString() + ", " + numeroRevista;
+        return super.toString() + ", revista nº: " + numeroRevista;
     }
-
-    
-    
 }
