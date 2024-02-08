@@ -11,6 +11,7 @@ public abstract class Vehiculo {
     ////Constructores
     public Vehiculo() {
         this.kilometrosRecorridos = 0;
+        vehiculosCreados++;
     }
 
     ////Getters
