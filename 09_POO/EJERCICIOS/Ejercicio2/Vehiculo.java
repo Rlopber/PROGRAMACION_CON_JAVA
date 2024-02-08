@@ -9,7 +9,7 @@ public abstract class Vehiculo {
     private int kilometrosRecorridos;
 
     ////Constructores
-    public Vehiculo(int kilometrosRecorridos) {
+    public Vehiculo() {
         this.kilometrosRecorridos = 0;
     }
 
@@ -39,6 +39,6 @@ public abstract class Vehiculo {
     ////Override
     @Override
     public String toString() {
-        return "Este vehículo ha recorrido " + kilometrosRecorridos + " km.";
+        return "Has recorrido " + kilometrosRecorridos + " km";
     }
 }

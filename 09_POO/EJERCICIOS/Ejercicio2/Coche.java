@@ -6,8 +6,8 @@ public class Coche extends Vehiculo {
     private String modelo;
 
     ////Constructores
-    public Coche(int kilometrosRecorridos, String modelo) {
-        super(kilometrosRecorridos);
+    public Coche(String modelo) {
+        super();
         this.modelo = modelo;
     }
     
@@ -18,4 +18,8 @@ public class Coche extends Vehiculo {
     }
 
     ////Override
+    @Override
+    public String toString() {
+        return super.toString() + " en tu " + modelo + ".";
+    }
 }

@@ -2,11 +2,13 @@ package Ejercicio2;
 
 public class MenuVehiculo {
     public static void main(String[] args) throws InterruptedException {
-        Coche coche = new Coche (0, "Ibiza");
+        Coche coche = new Coche ("Ibiza");
+        Bicicleta bicicleta = new Bicicleta();
 
         boolean continuar = true;
         
         do {
+            System.out.println();
             System.out.println("VEHÍCULOS");
             System.out.println("=========");
 
@@ -21,6 +23,7 @@ public class MenuVehiculo {
 
             System.out.print("Elige una opción (1-8): ");
             int opcion = Integer.parseInt(System.console().readLine());
+            System.out.println();
 
             switch (opcion) {
                 case 1:
@@ -40,11 +43,10 @@ public class MenuVehiculo {
                     }
                     System.out.print(" ¡Llegaste!\n");
                     Thread.sleep(500);
-                    System.out.println();
                     break;
 
                 case 2:
-                
+                    System.out.println(bicicleta.caballito());
                     break;
 
                 case 4:
@@ -52,14 +54,15 @@ public class MenuVehiculo {
                     break;
 
                 case 5:
-                
+                    System.out.println(bicicleta);
                     break;
 
                 case 6:
-                
+                    System.out.println(coche);
                     break;
 
                 case 7:
+                    System.out.println("¡En total has recorrido " +  Vehiculo.getKilometrosTotales() + " kilómetros!");
                 
                     break;
 
@@ -69,6 +72,7 @@ public class MenuVehiculo {
                     break; 
             
                 default:
+                    System.out.println("La opción " + opcion + " no existe, elija otra.");
                     break;
             }
         } while (continuar);
