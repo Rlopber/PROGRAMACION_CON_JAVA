@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "09_POO\\EJERCICIOS",
         "09_POO\\EJEMPLOS\\HERENCIA",
-        "07_ARRAYS\\EJERCICIOS"
+        "07_ARRAYS\\EJERCICIOS",
+        "EJERCICIOS_EVALUABLES"
     ],
     "terminal.integrated.detectLocale": "auto"
 }

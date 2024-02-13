@@ -1,5 +1,3 @@
-package ArrayBidimensional;
-
 public class ActEvQuiniela {
     public static void main(String[] args) {
 
