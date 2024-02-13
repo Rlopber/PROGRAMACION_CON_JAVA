@@ -2,11 +2,11 @@ package funcionquiniela;
 
 public class FuncionQuiniela {
 
-    public static int[][] generarQuinielaManual() {
-        int[][] quiniela = new int [14][3];
+    public static int[][] generarQuinielaManual(int apuesta) {
+        int[][] quiniela = new int [14][apuesta];
         int respuesta;
 
-        System.out.println("Ingrese las posiciones para cada partido (0 para local, 1 para empate, 2 para visitante):");
+        System.out.println("Ingrese las posiciones para cada partido (1 para local, 0 para empate, 2 para visitante):");
         
             for (int i = 0; i < quiniela.length; i++) {
                 System.out.print("Partido " + (i+1) + " ");
@@ -23,8 +23,8 @@ public class FuncionQuiniela {
         return quiniela;
     }
 
-    public static int[][] generarQuinielaRandom() {
-        int[][] quiniela = new int [14][3];
+    public static int[][] generarQuinielaRandom(int apuesta) {
+        int[][] quiniela = new int [14][apuesta];
 
         for (int i = 0; i < quiniela.length; i++) {
             for (int j = 0; j < quiniela[i].length; j++) {
@@ -71,9 +71,9 @@ public class FuncionQuiniela {
             }
             
             for (int j = 0; j < quiniela[i].length; j++) {
-                if (quiniela[i][j] == 0) {
+                if (quiniela[i][j] == 1) {
                     System.out.print(" X |");
-                } else if (quiniela[i][j] == 1) {
+                } else if (quiniela[i][j] == 0) {
                     System.out.print("1  |");
                 } else {
                     System.out.print("  2|");
@@ -82,8 +82,13 @@ public class FuncionQuiniela {
             System.out.println();
         }
 
-        System.out.println("-----------------");
+        // Pintar línea separatoria
+        for (int i = 0; i < (5+(4*(quiniela[i].length))); i++) {
+            System.out.print("-");
+        }
+        System.out.println();
 
+        // Mostrar pleno
         System.out.println("15. | Local " + (pleno[0] == 3 ? "M" : pleno[0]) + " Visitante " + (pleno[1] == 3 ? "M" : pleno[1]));
     }
 
