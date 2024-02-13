@@ -97,11 +97,11 @@ public class FuncionQuiniela {
         boolean pleno = false;
         int columna = 0;
 
-        for (int i = 0; i < resultado[0].length; i++) {
+        for (int i = 0; i < quiniela[0].length; i++) {
             columna++;
             aciertos = 0;
-            for (int j = 0; j < resultado.length; j++) {
-                if (quiniela[j][i] == resultado[j][i]) {
+            for (int j = 0; j < quiniela.length; j++) {
+                if (quiniela[j][i] == resultado[j][0]) {
                     aciertos++;
                 }
             }

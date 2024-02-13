@@ -3,6 +3,7 @@ import funcionquiniela.*;
 public class Quiniela {
     public static void main(String[] args) {
         int apuesta;
+
         int[] plenoQuiniela = new int[2];
         int[] plenoResultado = FuncionQuiniela.generarPlenoRandom();
         int opcion;
@@ -38,7 +39,7 @@ public class Quiniela {
         }
 
         // Genera la quiniela del resultado
-        int[][] resultado = FuncionQuiniela.generarQuinielaRandom(apuesta);
+        int[][] resultado = FuncionQuiniela.generarQuinielaRandom(1);
 
         // Enseñar la quiniela
         System.out.println("Aquí está tu quiniela: ");
