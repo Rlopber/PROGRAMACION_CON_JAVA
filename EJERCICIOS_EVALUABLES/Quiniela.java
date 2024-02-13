@@ -42,6 +42,6 @@ public class Quiniela {
         System.out.println();
 
         //Ver los aciertos y si has sido premiado
-        FuncionQuiniela.verAciertosQuiniela(quiniela, resultado);
+        FuncionQuiniela.verAciertosQuiniela(quiniela, resultado, plenoQuiniela, plenoResultado);
     }
 }

@@ -87,8 +87,9 @@ public class FuncionQuiniela {
         System.out.println("15. | Local " + (pleno[0] == 3 ? "M" : pleno[0]) + " Visitante " + (pleno[1] == 3 ? "M" : pleno[1]));
     }
 
-    public static void verAciertosQuiniela(int[][] quiniela, int[][] resultado){
+    public static void verAciertosQuiniela(int[][] quiniela, int[][] resultado, int[] plenoQuiniela, int[] plenoResultado) {
         int aciertos;
+        boolean pleno = false;
         int columna = 0;
 
         for (int i = 0; i < resultado[0].length; i++) {
@@ -103,8 +104,26 @@ public class FuncionQuiniela {
             System.out.print("En la columna " + columna + " has acertado " + aciertos + ". ");
             if (aciertos >= 10) {
                 System.out.print("¡La columna ha sido premiada!");
+                System.out.println();
+                pleno = true;
             }
             System.out.println();
+        }
+        
+        if (pleno) {
+            System.out.println("Comprobemos el pleno: ");
+            aciertos = 0;
+            for (int k = 0; k < plenoResultado.length; k++) {
+                if (plenoQuiniela[k] == plenoResultado[k]) {
+                    aciertos++;
+                }
+            }
+
+            if (aciertos == 2) {
+                System.out.println("¡ENHORABUENA! ¡HICISTE PLENO!");
+            } else {
+                System.out.println("Lo siento, no lograste el pleno.");
+            }
         }
     }
 }
