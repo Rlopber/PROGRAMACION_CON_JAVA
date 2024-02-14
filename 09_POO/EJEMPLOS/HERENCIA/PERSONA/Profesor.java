@@ -1,4 +1,4 @@
-package PERSONA;
+package HERENCIA.PERSONA;
 
 public class Profesor extends Persona {
     ////Atributo

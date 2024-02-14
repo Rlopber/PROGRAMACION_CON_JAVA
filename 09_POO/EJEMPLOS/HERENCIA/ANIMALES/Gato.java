@@ -1,4 +1,4 @@
-package ANIMALES; 
+package HERENCIA.ANIMALES; 
 
 
 /**
