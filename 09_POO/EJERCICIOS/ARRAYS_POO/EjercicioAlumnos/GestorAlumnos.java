@@ -4,10 +4,9 @@ public class GestorAlumnos {
     
     
     /** 
-     * Dar de alta a un alumno en el sistema
+     * Dar de alta a un alumno en el sistema.
      * @param alumnos
      */
-
     public static void darAlta(Alumno[] alumnos) {
         System.out.println("¿Cuántos alumnos va a dar de alta?");
 
@@ -50,21 +49,21 @@ public class GestorAlumnos {
     
     
     /** 
-     * Mostrar por pantalla el listado de alumnos
+     * Mostrar por pantalla el listado de alumnos.
      * @param alumnos
      */
 
     public static void mostrarListado(Alumno[] alumnos) {
         for (int i = 0; i < alumnos.length; i++) {
             if (alumnos[i] != null) {
-                System.out.println((i+1) + ". Nombre: " + alumnos[i].getNombre() + "\tNota Media: " + alumnos[i].getNotaMedia());
+                System.out.println(alumnos[i].toString());
             }
         }
     }
-    
+
     
     /** 
-     * Modificar la información de un alumno
+     * Modificar la información de un alumno.
      * @param alumnos
      */
 
@@ -87,7 +86,7 @@ public class GestorAlumnos {
                     String nombre = System.console().readLine();
                     alumnos[(numeroAlumno-1)].setNombre(nombre);
 
-                    System.out.print("Nota media del alumno: " );
+                    System.out.print("Nota media del alumno: ");
                     Double notaMedia = Double.parseDouble(System.console().readLine());
                     alumnos[(numeroAlumno-1)].setNotaMedia(notaMedia);
 
@@ -151,7 +150,6 @@ public class GestorAlumnos {
                     alumnoEncontrado = true;
                 }
             }
-        
         return alumnoEncontrado;
     }
     
@@ -186,6 +184,6 @@ public class GestorAlumnos {
             default:
                 System.out.println("La opción " + opcion + " no existe, pruebe de nuevo.");
                 break;
-            }
+        }
     }
 }

@@ -3,9 +3,8 @@ package ARRAYS_POO.EjercicioAlumnos;
 public class CRUDAlumnos {
     public static void main(String[] args) {
         Alumno[] alumnos = new Alumno[100]; //Creamos el array de objetos
-        String nombre = "";
-        double notaMedia = 0;
         boolean continuar = true;
+        String opcion;
 
         System.out.println("¡Bienvenido a la aplicación de gestión de alumnos!");
 
@@ -13,7 +12,7 @@ public class CRUDAlumnos {
         System.out.println("¿Qué desea realizar?");
         System.out.print("1. Dar alta\n2. Mostrar listado\n3. Editar alumno\n4. Borrar alumno\n5. Salir\n");
         System.out.print("Opción: ");
-        String opcion = System.console().readLine();
+        opcion = System.console().readLine();
         System.out.println();
 
             switch (opcion) {
