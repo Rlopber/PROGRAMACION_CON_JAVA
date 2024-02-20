@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
 *
@@ -15,11 +16,22 @@ public class EjemploArrayList08 {
         //Se añaden 5 elementos
         camada.add(new GatoSimple("HEMBRA", "Naranja", "Atigrado"));
         camada.add(new GatoSimple("MACHO", "Gris", "Siamés"));
+        camada.add(new GatoSimple("MACHO", "Negro", "Callejero"));
+        camada.add(new GatoSimple("HEMBRA", "Manchas", "Callejero"));
+        camada.add(new GatoSimple("MACHO", "Blanco", "Callejero"));
 
         System.out.println("Listado de gatos: ");
 
        for (GatoSimple gato : camada) {
             System.out.println(gato);
        }
+
+       Collections.sort(camada);
+
+       System.out.println("\nGatos ordenados por sexo: ");
+
+       for (GatoSimple gato : camada) {
+        System.out.println(gato);
+        }
     }
 }
