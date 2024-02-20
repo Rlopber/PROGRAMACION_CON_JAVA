@@ -5,7 +5,7 @@
 * @author: Raquel Lopez
 */
 
-public class GatoSimple {
+public class GatoSimple implements Comparable<GatoSimple>{
 
     //Atributos 
 
@@ -75,6 +75,9 @@ public class GatoSimple {
             }
         }
     }
+        public int compareTo(GatoSimple g) {
+            return (this.sexo).compareTo(g.getSexo());
+        }
 
         @Override
         public String toString() {
