@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CuentaApp",
+            "request": "launch",
+            "mainClass": "Cuenta.CuentaApp",
+            "projectName": "PROGRAMACION_CON_JAVA_3ec6d695"
+        },
+        {
+            "type": "java",
+            "name": "CuentaApp",
+            "request": "launch",
+            "mainClass": "CUENTA.CuentaApp",
+            "projectName": "PROGRAMACION_CON_JAVA_3ec6d695"
+        },
+        {
+            "type": "java",
+            "name": "AppCuenta",
+            "request": "launch",
+            "mainClass": "Cuenta.AppCuenta",
+            "projectName": "PROGRAMACION_CON_JAVA_3ec6d695"
+        },
+        {
+            "type": "java",
             "name": "MenuVehiculo",
             "request": "launch",
             "mainClass": "Ejercicio2.MenuVehiculo",
