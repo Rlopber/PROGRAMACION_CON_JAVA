@@ -1,4 +1,4 @@
-package PERSONA;
+package HERENCIA.PERSONA;
 /**
 *
 * Clase Estudiante que herada de la clase Persona

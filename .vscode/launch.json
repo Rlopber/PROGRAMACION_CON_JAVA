@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CuentaApp",
             "request": "launch",
             "mainClass": "Cuenta.CuentaApp",
@@ -24,6 +25,19 @@
             "request": "launch",
             "mainClass": "Cuenta.AppCuenta",
             "projectName": "PROGRAMACION_CON_JAVA_3ec6d695"
+=======
+            "name": "EjemploArrayList07",
+            "request": "launch",
+            "mainClass": "EjemploArrayList07",
+            "projectName": "PROGRAMACION_CON_JAVA_c78f5a29"
+        },
+        {
+            "type": "java",
+            "name": "EjemploArrayList02",
+            "request": "launch",
+            "mainClass": "EjemploArrayList02",
+            "projectName": "PROGRAMACION_CON_JAVA_c78f5a29"
+>>>>>>> ba8b96c5affcc02a11022ac2876c709d66cfe439
         },
         {
             "type": "java",

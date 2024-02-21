@@ -2,7 +2,7 @@ package Ejercicio2;
 
 public class Coche extends Vehiculo {
     
-    ////Atributos
+    ////Atributos de clase
     private String modelo;
 
     ////Constructores

@@ -2,10 +2,11 @@ package Ejercicio2;
 
 public abstract class Vehiculo {
 
-    ////Atributos
+    ////Atributo de clase
     private static int vehiculosCreados = 0;
     private static int kilometrosTotales = 0;
 
+    ////Atributos de instancia
     private int kilometrosRecorridos;
 
     ////Constructores
@@ -15,20 +16,13 @@ public abstract class Vehiculo {
     }
 
     ////Getters
-    public static int getVehiculosCreados() {
-        return vehiculosCreados;
-    }
-
-    ////Métodos
-
     /* Devuelve los kilometros recorridos por el vehículo*/
     public int getKilometrosRecorridos() {
         return this.kilometrosRecorridos;
     }
 
-    /* Devuelve el total de kilometros recorridos por todos los vehículos */
-    public static int getKilometrosTotales() {
-        return Vehiculo.kilometrosTotales;
+    public static int getVehiculosCreados() {
+        return vehiculosCreados;
     }
 
     /* Anda con el vehículo */
@@ -37,6 +31,12 @@ public abstract class Vehiculo {
         kilometrosTotales += kilometros;
     }
 
+    ////Métodos de clase
+    /* Devuelve el total de kilometros recorridos por todos los vehículos */ 
+    public static int getKilometrosTotales() {
+        return Vehiculo.kilometrosTotales;
+    }
+    
     ////Override
     @Override
     public String toString() {

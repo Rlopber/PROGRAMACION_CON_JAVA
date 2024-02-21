@@ -1,4 +1,4 @@
-package PERSONA;
+package HERENCIA.PERSONA;
 
 public class AppPersonaEstudiante {
     public static void main(String[] args) {
