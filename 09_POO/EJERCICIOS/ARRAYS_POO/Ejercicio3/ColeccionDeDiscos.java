@@ -8,10 +8,14 @@ public class ColeccionDeDiscos {
         String titulo;
         String genero;
         int duracion;
+        int codigo = 1;
+
         
-        //Crear los discos
-        for (int i = 0; i < discos.length; i++) {
-            System.out.println(discos[i]);
+        System.out.print("Nuevo código: ");
+        String codigoIntroducido = System.console().readLine();
+        if (!codigoIntroducido.equals("")) {
+            codigo = Integer.parseInt(codigoIntroducido);
         }
+        System.out.println(codigo);
     }
 }

@@ -7,6 +7,13 @@ public class Disco {
     private String genero;
     private int duracion; // duración total en minutos
 
+    public Disco(String autor, String titulo, String genero, int duracion) {
+        this.autor = autor;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracion = duracion;
+    }
+
     public String getCodigo() {
         return codigo;
     }

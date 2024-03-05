@@ -1,6 +1,6 @@
-package sieteymedia;
+import java.util.Locale;
 
-public class carta {
+public class Carta {
 
     //// Atributo
     private String palo;    // Palo de la carta
@@ -8,7 +8,7 @@ public class carta {
     private double puntos;  // Puntuación de la carta
 
     //// Constructor
-    public carta(String palo, String numero, double puntos) {
+    public Carta(String palo, String numero, double puntos) {
         this.palo = palo;
         this.numero = numero;
         this.puntos = puntos;
@@ -27,12 +27,9 @@ public class carta {
         return this.puntos;
     }
 
-    /*No hacen falta setters porque no se van a modificar en ningún momento:
-    * Ni los números, ni los palos ni los puntos 
-    */
-
+    
     @Override
     public String toString() {
-        return String.format("%s de %s", this.numero, this.palo, this.puntos);
+        return String.format(Locale.US,"%-20s\tValor: %.1f", this.numero + " de " + this.palo, this.puntos);
     }
 }

@@ -1,11 +1,6 @@
 {
     "java.project.sourcePaths": [
-<<<<<<< HEAD
-        "09_POO\\PRACTICANDO"
-=======
-        "10_COLECCIONES_Y_DICCIONARIOS\\EJEMPLOS",
-        "10_COLECCIONES_Y_DICCIONARIOS\\EJERCICIOS"
->>>>>>> ba8b96c5affcc02a11022ac2876c709d66cfe439
+        "09_POO\\SIETEYMEDIO"
     ],
     "terminal.integrated.detectLocale": "auto"
 }
