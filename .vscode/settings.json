@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "09_POO\\EJERCICIOS\\ARRAYS_POO"
+        "09_POO\\EJERCICIOS\\ARRAYS_POO",
+        "10_COLECCIONES_Y_DICCIONARIOS\\EJERCICIOS"
     ],
     "terminal.integrated.detectLocale": "auto"
 }
