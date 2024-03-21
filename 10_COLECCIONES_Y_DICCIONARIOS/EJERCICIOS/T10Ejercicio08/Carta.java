@@ -1,7 +1,7 @@
 package T10Ejercicio08;
 
 public class Carta {
-    private static String[] palos = {"Oro", "Espada", "Bastos", "Copas"};
+    private static String[] palos = {"Oros", "Espadas", "Bastos", "Copas"};
     private static String[] numeros = {"1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"};
 
     private String palo;
@@ -23,23 +23,19 @@ public class Carta {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
         if (obj == null)
             return false;
+
         if (getClass() != obj.getClass())
             return false;
-        Carta other = (Carta) obj;
-        if (palo == null) {
-            if (other.palo != null)
-                return false;
-        } else if (!palo.equals(other.palo))
+
+        Carta other = (Carta) obj;      
+        if (!numero.equals(other.numero))   //Esto es más probable que ocurra, por eso se pone primero
             return false;
-        if (numero == null) {
-            if (other.numero != null)
-                return false;
-        } else if (!numero.equals(other.numero))
+
+        if (!palo.equals(other.palo))
             return false;
+
         return true;
     }
 

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
 *
-* Realiza un programa que escoja al azar 10 cartas de la baraja española (10 objetos de la clase Carta). 
+* Realiza un programa que escoja al azar 10 cartas de la mano española (10 objetos de la clase Carta). 
 * Emplea un objeto de la clase ArrayList para almacenarlas y asegúrate de que no se repite ninguna.
 *
 * @author: Raquel Lopez
@@ -11,18 +11,26 @@ import java.util.ArrayList;
 
 public class AppCarta {
     public static void main(String[] args) {
-        
-        ArrayList<Carta> baraja = new ArrayList<>();
+
+        final int TOTAL_CARTAS = 10;
+
+        ArrayList<Carta> mano = new ArrayList<>();
 
         Carta c = new Carta();
-        baraja.add(c);
+        mano.add(c);
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < TOTAL_CARTAS; i++) {
             do {
-                Carta nueva = new Carta();
+                c = new Carta();
+            } while (mano.contains(c));
 
-            } while (baraja.contains(nueva));
+            mano.add(c);
         }
+
+        System.out.println("");
         
+        for (Carta carta : mano) {
+            System.out.println(carta);
+        }
     }
 }
