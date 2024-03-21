@@ -129,12 +129,18 @@ public class Gestisimal {
                     System.out.print("\nIntroduzca el código del artículo que ha llegado al almacén: ");
                     codigoIntroducido = System.console().readLine();
 
-                    System.out.print("¿Qué cantidad de mercancía ha llegado?: ");
-                    mercancia = Integer.parseInt(System.console().readLine());
-
                     if (!codigoExiste(codigoIntroducido)) {
                         System.out.println("El código introducido no está en el sistema.");
                     } else {
+                        System.out.print("¿Qué cantidad de mercancía ha llegado?: ");
+                        mercancia = Integer.parseInt(System.console().readLine());
+                        do {
+                            System.out.print("¿Qué cantidad de mercancía tiene que salir?: ");
+                            mercancia = Integer.parseInt(System.console().readLine());
+                            if (mercancia < 1) {
+                                System.out.println("La cantidad no puede ser inferior a 1, pruebe de nuevo.");
+                            }
+                        } while (mercancia < 1);
                         entradaMercancia(codigoIntroducido, mercancia);
                     }
                     
@@ -144,12 +150,16 @@ public class Gestisimal {
                     System.out.print("\nIntroduzca el código del artículo que va a salir del almacén: ");
                     codigoIntroducido = System.console().readLine();
 
-                    System.out.print("¿Qué cantidad de mercancía tiene que salir?: ");
-                    mercancia = Integer.parseInt(System.console().readLine());
-
                     if (!codigoExiste(codigoIntroducido)) {
                         System.out.println("El código introducido no está en el sistema.");
                     } else {
+                        do {
+                            System.out.print("¿Qué cantidad de mercancía tiene que salir?: ");
+                            mercancia = Integer.parseInt(System.console().readLine());
+                            if (mercancia < 1) {
+                                System.out.println("La cantidad no puede ser inferior a 1, pruebe de nuevo.");
+                            }
+                        } while (mercancia < 1);
                         salidaMercancia(codigoIntroducido, mercancia);
                     }
                     break;
@@ -232,11 +242,11 @@ public class Gestisimal {
         int stockActual;
 
         stockActual = almacen[encontrarCodigo(codigo)].getStock();
-        if (stockActual < salidaStock) {
-            System.out.println("Lo siento, no hay suficiente stock para cubrir la salida.");
-        } else {
+        if (stockActual - salidaStock >= 0) {
             almacen[encontrarCodigo(codigo)].setStock(stockActual-salidaStock);
             System.out.println("¡La mercancía ha salido del almacén!");
+        } else {
+            System.out.println("Lo siento, no hay suficiente stock para cubrir la salida.");
         }
     } 
 }
